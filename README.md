@@ -27,9 +27,9 @@ Or
 ![False counts by matrix size](charts/wg_distribution_of_false_counts.png)
 
 Similarly, from the wordle run we can see similar trends as well ...
-![It really doesn't like changing predictions a little by little](charts/wordle_avg_GY_trend.png)
+!["G" counts per attemtp shows how well o1 does!](charts/wordle_G_trends_by_model.png)
 
-![And the number of "good" guesses don't seem to go any higher than base guesswork](charts/wordle_GY_count.png)
+![The number of "Y" guesses seem to be pretty consistent](charts/wordle_Y_trends_by_model.png)
 
 # Next steps
 There are many other such evaluations I want to create. Next up is likely sudokus and cipher puzzles, which also require iterative reasoning while also meeting our criteria.
