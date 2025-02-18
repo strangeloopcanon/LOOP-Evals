@@ -3,137 +3,177 @@
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "alive",
+        "Target word": "nasty",
         "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "alive",
-        "Guessed word": "swing",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: w - _\nPosition 3: i - G\nPosition 4: n - _\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "alive",
-        "Guessed word": "glyph",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: y - _\nPosition 4: p - _\nPosition 5: h - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "apple",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "apple",
-        "Guessed word": "lumpy",
         "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: l - Y\nPosition 2: u - _\nPosition 3: m - _\nPosition 4: p - Y\nPosition 5: y - _"
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - Y\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "nasty",
+        "Guessed word": "slant",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 4,
+        "Feedback": "Position 1: s - Y\nPosition 2: l - _\nPosition 3: a - Y\nPosition 4: n - Y\nPosition 5: t - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "apple",
-        "Guessed word": "gummy",
+        "Target word": "nasty",
+        "Guessed word": "plant",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: u - _\nPosition 3: m - _\nPosition 4: m - _\nPosition 5: y - _"
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: a - Y\nPosition 4: n - Y\nPosition 5: t - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "apple",
-        "Guessed word": "grimy",
+        "Target word": "nasty",
+        "Guessed word": "blunt",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: m - _\nPosition 5: y - _"
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: b - _\nPosition 2: l - _\nPosition 3: u - _\nPosition 4: n - Y\nPosition 5: t - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "apple",
-        "Guessed word": "sandy",
+        "Target word": "nasty",
+        "Guessed word": "flint",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: a - Y\nPosition 3: n - _\nPosition 4: d - _\nPosition 5: y - _"
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: f - _\nPosition 2: l - _\nPosition 3: i - _\nPosition 4: n - Y\nPosition 5: t - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "cynic",
+        "Target word": "champ",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: c - G\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: n - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "champ",
+        "Guessed word": "guile",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: g - _\nPosition 2: u - _\nPosition 3: i - _\nPosition 4: l - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "topaz",
+        "Guessed word": "slate",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - _\nPosition 2: l - _\nPosition 3: a - Y\nPosition 4: t - Y\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "topaz",
         "Guessed word": "crate",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - G\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: t - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "cynic",
-        "Guessed word": "glass",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: s - _"
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: t - Y\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "cynic",
-        "Guessed word": "snipe",
+        "Target word": "topaz",
+        "Guessed word": "brave",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - _\nPosition 2: n - Y\nPosition 3: i - Y\nPosition 4: p - _\nPosition 5: e - _"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "cynic",
-        "Guessed word": "grasp",
+        "Target word": "topaz",
+        "Guessed word": "grime",
         "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: p - _"
+        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: m - _\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "cynic",
-        "Guessed word": "grind",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: i - Y\nPosition 4: n - Y\nPosition 5: d - _"
+        "Target word": "topaz",
+        "Guessed word": "coral",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: c - _\nPosition 2: o - G\nPosition 3: r - _\nPosition 4: a - G\nPosition 5: l - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "sower",
+        "Target word": "trait",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: c - _\nPosition 2: r - G\nPosition 3: a - G\nPosition 4: n - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "trait",
+        "Guessed word": "grill",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: g - _\nPosition 2: r - G\nPosition 3: i - Y\nPosition 4: l - _\nPosition 5: l - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "trait",
+        "Guessed word": "bring",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: b - _\nPosition 2: r - G\nPosition 3: i - Y\nPosition 4: n - _\nPosition 5: g - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "trait",
+        "Guessed word": "wring",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: w - _\nPosition 2: r - G\nPosition 3: i - Y\nPosition 4: n - _\nPosition 5: g - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "trait",
+        "Guessed word": "prism",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: p - _\nPosition 2: r - G\nPosition 3: i - Y\nPosition 4: s - _\nPosition 5: m - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "revel",
         "Guessed word": "crane",
         "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 2,
@@ -143,1027 +183,187 @@
         "Global attempt #": 1,
         "Run #": 2,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "sower",
-        "Guessed word": "slyly",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - G\nPosition 2: l - _\nPosition 3: y - _\nPosition 4: l - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "sower",
-        "Guessed word": "fuzzy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: u - _\nPosition 3: z - _\nPosition 4: z - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "sower",
-        "Guessed word": "gypsy",
+        "Target word": "revel",
+        "Guessed word": "spine",
         "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: y - _\nPosition 3: p - _\nPosition 4: s - Y\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "trace",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 3,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - Y\nPosition 2: r - G\nPosition 3: a - G\nPosition 4: n - _\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "trace",
-        "Guessed word": "gloat",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: l - _\nPosition 3: o - _\nPosition 4: a - Y\nPosition 5: t - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "trace",
-        "Guessed word": "great",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 3,
-        "Feedback": "Position 1: g - _\nPosition 2: r - G\nPosition 3: e - Y\nPosition 4: a - Y\nPosition 5: t - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "trace",
-        "Guessed word": "trail",
-        "Number of 'G' in colorised results": 3,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: t - G\nPosition 2: r - G\nPosition 3: a - G\nPosition 4: i - _\nPosition 5: l - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "cluck",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - G\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "cluck",
-        "Guessed word": "globe",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: o - _\nPosition 4: b - _\nPosition 5: e - _"
+        "Feedback": "Position 1: s - _\nPosition 2: p - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "cluck",
-        "Guessed word": "gland",
-        "Number of 'G' in colorised results": 1,
+        "Target word": "revel",
+        "Guessed word": "moist",
+        "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: d - _"
+        "Feedback": "Position 1: m - _\nPosition 2: o - _\nPosition 3: i - _\nPosition 4: s - _\nPosition 5: t - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "cluck",
-        "Guessed word": "grasp",
+        "Target word": "revel",
+        "Guessed word": "bulky",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: p - _"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: b - _\nPosition 2: u - _\nPosition 3: l - Y\nPosition 4: k - _\nPosition 5: y - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "cluck",
-        "Guessed word": "gleam",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: e - _\nPosition 4: a - _\nPosition 5: m - _"
+        "Target word": "revel",
+        "Guessed word": "lucky",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: l - Y\nPosition 2: u - _\nPosition 3: c - _\nPosition 4: k - _\nPosition 5: y - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "chatgpt-4o-latest",
-        "Target word": "crone",
-        "Guessed word": "stare",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - _\nPosition 4: r - Y\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "crone",
-        "Guessed word": "crypt",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - G\nPosition 2: r - G\nPosition 3: y - _\nPosition 4: p - _\nPosition 5: t - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "crone",
-        "Guessed word": "swing",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: w - _\nPosition 3: i - _\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "crone",
-        "Guessed word": "bring",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: b - _\nPosition 2: r - G\nPosition 3: i - _\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "midst",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "midst",
-        "Guessed word": "stomp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 3,
-        "Feedback": "Position 1: s - Y\nPosition 2: t - Y\nPosition 3: o - _\nPosition 4: m - Y\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "midst",
-        "Guessed word": "stone",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - Y\nPosition 2: t - Y\nPosition 3: o - _\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "midst",
-        "Guessed word": "scone",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - Y\nPosition 2: c - _\nPosition 3: o - _\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "midst",
-        "Guessed word": "smart",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - Y\nPosition 2: m - Y\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: t - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "pixel",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "pixel",
-        "Guessed word": "dandy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: d - _\nPosition 2: a - _\nPosition 3: n - _\nPosition 4: d - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "pixel",
-        "Guessed word": "fuzzy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: u - _\nPosition 3: z - _\nPosition 4: z - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "pixel",
-        "Guessed word": "sassy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: a - _\nPosition 3: s - _\nPosition 4: s - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "drain",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: r - G\nPosition 3: a - G\nPosition 4: n - Y\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "drain",
-        "Guessed word": "soggy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: o - _\nPosition 3: g - _\nPosition 4: g - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "drain",
-        "Guessed word": "soggy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: o - _\nPosition 3: g - _\nPosition 4: g - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "chatgpt-4o-latest",
-        "Target word": "drain",
-        "Guessed word": "muggy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: m - _\nPosition 2: u - _\nPosition 3: g - _\nPosition 4: g - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "watch",
-        "Guessed word": "plumb",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: u - _\nPosition 4: m - _\nPosition 5: b - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "watch",
-        "Guessed word": "stare",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - _\nPosition 2: t - Y\nPosition 3: a - Y\nPosition 4: r - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "watch",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: s - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "watch",
+        "Target word": "smelt",
         "Guessed word": "crate",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 3,
-        "Feedback": "Position 1: c - Y\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: t - Y\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "watch",
-        "Guessed word": "strap",
-        "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - _\nPosition 2: t - Y\nPosition 3: r - _\nPosition 4: a - Y\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "whack",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - Y\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: n - _\nPosition 5: e - _"
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: t - Y\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "whack",
-        "Guessed word": "yacht",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 3,
-        "Feedback": "Position 1: y - _\nPosition 2: a - Y\nPosition 3: c - Y\nPosition 4: h - Y\nPosition 5: t - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "whack",
-        "Guessed word": "gravy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: v - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "whack",
-        "Guessed word": "sorry",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: o - _\nPosition 3: r - _\nPosition 4: r - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "whack",
-        "Guessed word": "mushy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: m - _\nPosition 2: u - _\nPosition 3: s - _\nPosition 4: h - Y\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "stock",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - Y\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "stock",
-        "Guessed word": "hasty",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: h - _\nPosition 2: a - _\nPosition 3: s - Y\nPosition 4: t - Y\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "stock",
-        "Guessed word": "sandy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - G\nPosition 2: a - _\nPosition 3: n - _\nPosition 4: d - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "stock",
-        "Guessed word": "tardy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: t - Y\nPosition 2: a - _\nPosition 3: r - _\nPosition 4: d - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "mount",
-        "Guessed word": "plant",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: n - G\nPosition 5: t - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "mount",
-        "Guessed word": "clang",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "mount",
-        "Guessed word": "slung",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: l - _\nPosition 3: u - G\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "mount",
-        "Guessed word": "bring",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "touch",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - Y\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "touch",
-        "Guessed word": "plumb",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: u - G\nPosition 4: m - _\nPosition 5: b - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "touch",
-        "Guessed word": "soggy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: o - G\nPosition 3: g - _\nPosition 4: g - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "balsa",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "balsa",
-        "Guessed word": "slyly",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - Y\nPosition 2: l - Y\nPosition 3: y - _\nPosition 4: l - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "balsa",
-        "Guessed word": "style",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - Y\nPosition 2: t - _\nPosition 3: y - _\nPosition 4: l - Y\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "balsa",
-        "Guessed word": "stuck",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - Y\nPosition 2: t - _\nPosition 3: u - _\nPosition 4: c - _\nPosition 5: k - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "flirt",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "flirt",
-        "Guessed word": "style",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - _\nPosition 2: t - Y\nPosition 3: y - _\nPosition 4: l - Y\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "flirt",
-        "Guessed word": "crush",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: u - _\nPosition 4: s - _\nPosition 5: h - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "flirt",
-        "Guessed word": "slyly",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: l - G\nPosition 3: y - _\nPosition 4: l - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "coyly",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - G\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "coyly",
-        "Guessed word": "globe",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: l - Y\nPosition 3: o - Y\nPosition 4: b - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "coyly",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "coyly",
-        "Guessed word": "gloom",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: l - Y\nPosition 3: o - Y\nPosition 4: o - _\nPosition 5: m - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "cloth",
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "smelt",
         "Guessed word": "brave",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: v - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "cloth",
-        "Guessed word": "fresh",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: r - _\nPosition 3: e - _\nPosition 4: s - _\nPosition 5: h - G"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: v - _\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "cloth",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: p - _"
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "smelt",
+        "Guessed word": "spine",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - G\nPosition 2: p - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "cloth",
-        "Guessed word": "plumb",
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "smelt",
+        "Guessed word": "since",
         "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: p - _\nPosition 2: l - G\nPosition 3: u - _\nPosition 4: m - _\nPosition 5: b - _"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - G\nPosition 2: i - _\nPosition 3: n - _\nPosition 4: c - _\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "cloth",
-        "Guessed word": "globs",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: o - G\nPosition 4: b - _\nPosition 5: s - _"
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "smelt",
+        "Guessed word": "spoke",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - G\nPosition 2: p - _\nPosition 3: o - _\nPosition 4: k - _\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "state",
-        "Guessed word": "plumb",
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "diner",
+        "Guessed word": "crisp",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: u - _\nPosition 4: m - _\nPosition 5: b - _"
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: i - Y\nPosition 4: s - _\nPosition 5: p - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 2,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "state",
-        "Guessed word": "stark",
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "diner",
+        "Guessed word": "trice",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: t - _\nPosition 2: r - Y\nPosition 3: i - Y\nPosition 4: c - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "diner",
+        "Guessed word": "brine",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 4,
+        "Feedback": "Position 1: b - _\nPosition 2: r - Y\nPosition 3: i - Y\nPosition 4: n - Y\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "diner",
+        "Guessed word": "spine",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: s - _\nPosition 2: p - _\nPosition 3: i - Y\nPosition 4: n - Y\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "diner",
+        "Guessed word": "shine",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: s - _\nPosition 2: h - _\nPosition 3: i - Y\nPosition 4: n - Y\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "brash",
+        "Guessed word": "apple",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: a - Y\nPosition 2: p - _\nPosition 3: p - _\nPosition 4: l - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "brash",
+        "Guessed word": "brick",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: b - G\nPosition 2: r - G\nPosition 3: i - _\nPosition 4: c - _\nPosition 5: k - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "brash",
+        "Guessed word": "brave",
         "Number of 'G' in colorised results": 3,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - G\nPosition 2: t - G\nPosition 3: a - G\nPosition 4: r - _\nPosition 5: k - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "state",
-        "Guessed word": "bring",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - _"
+        "Feedback": "Position 1: b - G\nPosition 2: r - G\nPosition 3: a - G\nPosition 4: v - _\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "state",
-        "Guessed word": "brisk",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: s - Y\nPosition 5: k - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "claude-3-5-sonnet-latest",
-        "Target word": "state",
-        "Guessed word": "fuzzy",
-        "Number of 'G' in colorised results": 0,
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "brash",
+        "Guessed word": "brash",
+        "Number of 'G' in colorised results": 5,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: u - _\nPosition 3: z - _\nPosition 4: z - _\nPosition 5: y - _"
+        "Feedback": "Position 1: b - G\nPosition 2: r - G\nPosition 3: a - G\nPosition 4: s - G\nPosition 5: h - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "alive",
-        "Guessed word": "flour",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: l - G\nPosition 3: o - _\nPosition 4: u - _\nPosition 5: r - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "alive",
-        "Guessed word": "gland",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: d - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "alive",
-        "Guessed word": "glory",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: o - _\nPosition 4: r - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "alive",
-        "Guessed word": "sugar",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: u - _\nPosition 3: g - _\nPosition 4: a - Y\nPosition 5: r - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "alive",
-        "Guessed word": "gummy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: u - _\nPosition 3: m - _\nPosition 4: m - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "stout",
-        "Guessed word": "plumb",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: u - Y\nPosition 4: m - _\nPosition 5: b - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "stout",
-        "Guessed word": "sandy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - G\nPosition 2: a - _\nPosition 3: n - _\nPosition 4: d - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "stout",
-        "Guessed word": "gypsy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: y - _\nPosition 3: p - _\nPosition 4: s - Y\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "inter",
-        "Guessed word": "plant",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: n - Y\nPosition 5: t - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "inter",
-        "Guessed word": "chair",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: h - _\nPosition 3: a - _\nPosition 4: i - Y\nPosition 5: r - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "inter",
-        "Guessed word": "shone",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - _\nPosition 2: h - _\nPosition 3: o - _\nPosition 4: n - Y\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "inter",
-        "Guessed word": "shady",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: h - _\nPosition 3: a - _\nPosition 4: d - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "inter",
-        "Guessed word": "scorn",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - _\nPosition 2: c - _\nPosition 3: o - _\nPosition 4: r - Y\nPosition 5: n - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "quart",
-        "Guessed word": "plant",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: a - G\nPosition 4: n - _\nPosition 5: t - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "quart",
-        "Guessed word": "bring",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: b - _\nPosition 2: r - Y\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "lunch",
-        "Guessed word": "plumb",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: p - _\nPosition 2: l - Y\nPosition 3: u - Y\nPosition 4: m - _\nPosition 5: b - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "lunch",
-        "Guessed word": "clamp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: c - Y\nPosition 2: l - Y\nPosition 3: a - _\nPosition 4: m - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "lunch",
-        "Guessed word": "plant",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: p - _\nPosition 2: l - Y\nPosition 3: a - _\nPosition 4: n - Y\nPosition 5: t - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "lunch",
-        "Guessed word": "flank",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: f - _\nPosition 2: l - Y\nPosition 3: a - _\nPosition 4: n - Y\nPosition 5: k - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "lunch",
-        "Guessed word": "brand",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - Y\nPosition 5: d - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "pulpy",
-        "Guessed word": "table",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: t - _\nPosition 2: a - _\nPosition 3: b - _\nPosition 4: l - Y\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "pulpy",
-        "Guessed word": "sandy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: a - _\nPosition 3: n - _\nPosition 4: d - _\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "pulpy",
-        "Guessed word": "money",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: m - _\nPosition 2: o - _\nPosition 3: n - _\nPosition 4: e - _\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "pulpy",
-        "Guessed word": "candy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: a - _\nPosition 3: n - _\nPosition 4: d - _\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "pulpy",
-        "Guessed word": "crazy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: z - _\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "siege",
-        "Guessed word": "flare",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "siege",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - Y\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - Y\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "siege",
-        "Guessed word": "glory",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - Y\nPosition 2: l - _\nPosition 3: o - _\nPosition 4: r - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "siege",
-        "Guessed word": "flesh",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: f - _\nPosition 2: l - _\nPosition 3: e - G\nPosition 4: s - Y\nPosition 5: h - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "siege",
-        "Guessed word": "crony",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: o - _\nPosition 4: n - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "aloud",
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "album",
         "Guessed word": "crane",
         "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 1,
@@ -1172,328 +372,18 @@
     {
         "Global attempt #": 1,
         "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "aloud",
-        "Guessed word": "slyly",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: l - G\nPosition 3: y - _\nPosition 4: l - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "aloud",
-        "Guessed word": "glory",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: o - G\nPosition 4: r - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "aloud",
-        "Guessed word": "gravy",
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "album",
+        "Guessed word": "shire",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: y - _"
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - _\nPosition 2: h - _\nPosition 3: i - _\nPosition 4: r - _\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "elude",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "elude",
-        "Guessed word": "bring",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "elude",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "elude",
-        "Guessed word": "swing",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: w - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "elude",
-        "Guessed word": "swing",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: w - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "credo",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - G\nPosition 2: r - G\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "credo",
-        "Guessed word": "gravy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - G\nPosition 3: a - _\nPosition 4: v - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "credo",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - G\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "deepseek-reasoner",
-        "Target word": "credo",
-        "Guessed word": "briny",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: b - _\nPosition 2: r - G\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "clone",
-        "Guessed word": "trace",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: t - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: c - Y\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "clone",
-        "Guessed word": "glory",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: o - G\nPosition 4: r - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "clone",
-        "Guessed word": "fling",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: l - G\nPosition 3: i - _\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "hound",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - G\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "hound",
-        "Guessed word": "globe",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: l - _\nPosition 3: o - Y\nPosition 4: b - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "hound",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "hound",
-        "Guessed word": "soggy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: o - G\nPosition 3: g - _\nPosition 4: g - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "spicy",
-        "Guessed word": "stare",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - G\nPosition 2: t - _\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "spicy",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - Y\nPosition 5: p - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "spicy",
-        "Guessed word": "graph",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: p - Y\nPosition 5: h - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "spicy",
-        "Guessed word": "glory",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - _\nPosition 3: o - _\nPosition 4: r - _\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "swine",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - G\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "swine",
-        "Guessed word": "bring",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: i - G\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "swine",
-        "Guessed word": "sling",
-        "Number of 'G' in colorised results": 3,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - G\nPosition 2: l - _\nPosition 3: i - G\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "swine",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - Y\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "flank",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: n - G\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "flank",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: s - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "flank",
-        "Guessed word": "glass",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: a - G\nPosition 4: s - _\nPosition 5: s - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "flank",
-        "Guessed word": "sling",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: l - G\nPosition 3: i - _\nPosition 4: n - G\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "flank",
-        "Guessed word": "plant",
-        "Number of 'G' in colorised results": 3,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: p - _\nPosition 2: l - G\nPosition 3: a - G\nPosition 4: n - G\nPosition 5: t - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "agate",
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "spade",
         "Guessed word": "crane",
         "Number of 'G' in colorised results": 2,
         "Number of 'Y' in colorised results": 0,
@@ -1502,198 +392,748 @@
     {
         "Global attempt #": 1,
         "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "agate",
-        "Guessed word": "globe",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - Y\nPosition 2: l - _\nPosition 3: o - _\nPosition 4: b - _\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "agate",
-        "Guessed word": "swing",
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "spade",
+        "Guessed word": "buggy",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: w - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - Y"
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: b - _\nPosition 2: u - _\nPosition 3: g - _\nPosition 4: g - _\nPosition 5: y - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "agate",
-        "Guessed word": "bring",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - Y"
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "spade",
+        "Guessed word": "spine",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: p - G\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: e - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "agate",
-        "Guessed word": "fling",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: f - _\nPosition 2: l - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - Y"
+        "LLM type": "chatgpt-4o-latest",
+        "Target word": "spade",
+        "Guessed word": "since",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: i - _\nPosition 3: n - _\nPosition 4: c - _\nPosition 5: e - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "manor",
-        "Guessed word": "brave",
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "woman",
+        "Guessed word": "stare",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: b - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: e - _"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - Y\nPosition 4: r - _\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "manor",
-        "Guessed word": "crate",
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "woman",
+        "Guessed word": "trace",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: t - _\nPosition 5: e - _"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: t - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: c - _\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "manor",
-        "Guessed word": "grape",
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "woman",
+        "Guessed word": "place",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: p - _\nPosition 5: e - _"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: a - Y\nPosition 4: c - _\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "manor",
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "woman",
+        "Guessed word": "dance",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: d - _\nPosition 2: a - Y\nPosition 3: n - Y\nPosition 4: c - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "woman",
+        "Guessed word": "brave",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "coach",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - G\nPosition 4: r - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "coach",
+        "Guessed word": "adage",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: a - _\nPosition 2: d - _\nPosition 3: a - G\nPosition 4: g - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "coach",
+        "Guessed word": "ledge",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: l - _\nPosition 2: e - _\nPosition 3: d - _\nPosition 4: g - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "coach",
+        "Guessed word": "frogs",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: f - _\nPosition 2: r - _\nPosition 3: o - Y\nPosition 4: g - _\nPosition 5: s - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "coach",
+        "Guessed word": "mangy",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: m - _\nPosition 2: a - Y\nPosition 3: n - _\nPosition 4: g - _\nPosition 5: y - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "cider",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - _\nPosition 4: r - Y\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "cider",
+        "Guessed word": "early",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: e - Y\nPosition 2: a - _\nPosition 3: r - Y\nPosition 4: l - _\nPosition 5: y - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "cider",
         "Guessed word": "brake",
         "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: b - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: k - _\nPosition 5: e - _"
+        "Feedback": "Position 1: b - _\nPosition 2: r - Y\nPosition 3: a - _\nPosition 4: k - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "cider",
+        "Guessed word": "place",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: c - Y\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "manor",
-        "Guessed word": "blade",
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "cider",
+        "Guessed word": "peace",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: b - _\nPosition 2: l - _\nPosition 3: a - Y\nPosition 4: d - _\nPosition 5: e - _"
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: p - _\nPosition 2: e - Y\nPosition 3: a - _\nPosition 4: c - Y\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "azure",
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "circa",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - Y\nPosition 4: r - Y\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "circa",
+        "Guessed word": "place",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: a - Y\nPosition 4: c - G\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "circa",
+        "Guessed word": "peace",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: p - _\nPosition 2: e - _\nPosition 3: a - Y\nPosition 4: c - G\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "circa",
+        "Guessed word": "dance",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: d - _\nPosition 2: a - Y\nPosition 3: n - _\nPosition 4: c - G\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "circa",
+        "Guessed word": "mange",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: m - _\nPosition 2: a - Y\nPosition 3: n - _\nPosition 4: g - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "shake",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: t - _\nPosition 3: a - G\nPosition 4: r - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "shake",
+        "Guessed word": "price",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: p - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: c - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "shake",
+        "Guessed word": "stage",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: t - _\nPosition 3: a - G\nPosition 4: g - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "shake",
+        "Guessed word": "sugar",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - G\nPosition 2: u - _\nPosition 3: g - _\nPosition 4: a - Y\nPosition 5: r - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "shake",
+        "Guessed word": "stung",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: t - _\nPosition 3: u - _\nPosition 4: n - _\nPosition 5: g - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "manor",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - Y\nPosition 4: r - Y\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "manor",
+        "Guessed word": "paint",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: p - _\nPosition 2: a - G\nPosition 3: i - _\nPosition 4: n - Y\nPosition 5: t - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "manor",
+        "Guessed word": "point",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: p - _\nPosition 2: o - Y\nPosition 3: i - _\nPosition 4: n - Y\nPosition 5: t - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "manor",
+        "Guessed word": "joint",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: j - _\nPosition 2: o - Y\nPosition 3: i - _\nPosition 4: n - Y\nPosition 5: t - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "magic",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - Y\nPosition 4: r - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "magic",
+        "Guessed word": "poise",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: p - _\nPosition 2: o - _\nPosition 3: i - Y\nPosition 4: s - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "magic",
+        "Guessed word": "grove",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: g - Y\nPosition 2: r - _\nPosition 3: o - _\nPosition 4: v - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "magic",
+        "Guessed word": "gripe",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: g - Y\nPosition 2: r - _\nPosition 3: i - Y\nPosition 4: p - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "magic",
+        "Guessed word": "grime",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: g - Y\nPosition 2: r - _\nPosition 3: i - Y\nPosition 4: m - Y\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "poise",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - Y\nPosition 2: t - _\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "poise",
+        "Guessed word": "spare",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - Y\nPosition 2: p - Y\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "poise",
+        "Guessed word": "swing",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - Y\nPosition 2: w - _\nPosition 3: i - G\nPosition 4: n - _\nPosition 5: g - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "poise",
+        "Guessed word": "sprig",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: s - Y\nPosition 2: p - Y\nPosition 3: r - _\nPosition 4: i - Y\nPosition 5: g - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "poise",
+        "Guessed word": "speak",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: s - Y\nPosition 2: p - Y\nPosition 3: e - Y\nPosition 4: a - _\nPosition 5: k - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "unfit",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - _\nPosition 2: t - Y\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "unfit",
+        "Guessed word": "mourn",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: m - _\nPosition 2: o - _\nPosition 3: u - Y\nPosition 4: r - _\nPosition 5: n - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "unfit",
+        "Guessed word": "happy",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: h - _\nPosition 2: a - _\nPosition 3: p - _\nPosition 4: p - _\nPosition 5: y - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "unfit",
+        "Guessed word": "duchy",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: d - _\nPosition 2: u - Y\nPosition 3: c - _\nPosition 4: h - _\nPosition 5: y - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "unfit",
+        "Guessed word": "lying",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: l - _\nPosition 2: y - _\nPosition 3: i - Y\nPosition 4: n - Y\nPosition 5: g - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "grade",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - G\nPosition 4: r - Y\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "grade",
+        "Guessed word": "hedge",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: h - _\nPosition 2: e - _\nPosition 3: d - Y\nPosition 4: g - Y\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "grade",
+        "Guessed word": "going",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: g - G\nPosition 2: o - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: g - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "claude-3-5-sonnet-latest",
+        "Target word": "grade",
+        "Guessed word": "gripe",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: g - G\nPosition 2: r - G\nPosition 3: i - _\nPosition 4: p - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "heart",
         "Guessed word": "crane",
         "Number of 'G' in colorised results": 1,
         "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "azure",
-        "Guessed word": "spoke",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: p - _\nPosition 3: o - _\nPosition 4: k - _\nPosition 5: e - G"
+        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: a - G\nPosition 4: n - _\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "azure",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: s - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "azure",
-        "Guessed word": "sword",
-        "Number of 'G' in colorised results": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "heart",
+        "Guessed word": "snarl",
+        "Number of 'G' in colorised results": 2,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: w - _\nPosition 3: o - _\nPosition 4: r - G\nPosition 5: d - _"
+        "Feedback": "Position 1: s - _\nPosition 2: n - _\nPosition 3: a - G\nPosition 4: r - G\nPosition 5: l - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "azure",
-        "Guessed word": "graph",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: p - _\nPosition 5: h - _"
+        "LLM type": "deepseek-reasoner",
+        "Target word": "heart",
+        "Guessed word": "heart",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: h - G\nPosition 2: e - G\nPosition 3: a - G\nPosition 4: r - G\nPosition 5: t - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "royal",
-        "Guessed word": "brave",
+        "LLM type": "deepseek-reasoner",
+        "Target word": "totem",
+        "Guessed word": "crane",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: b - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "royal",
-        "Guessed word": "grave",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: g - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: e - _"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "royal",
-        "Guessed word": "crave",
+        "LLM type": "deepseek-reasoner",
+        "Target word": "totem",
+        "Guessed word": "stole",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: e - _"
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: s - _\nPosition 2: t - Y\nPosition 3: o - Y\nPosition 4: l - _\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "royal",
-        "Guessed word": "flame",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: f - _\nPosition 2: l - Y\nPosition 3: a - Y\nPosition 4: m - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "royal",
-        "Guessed word": "frame",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: f - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: m - _\nPosition 5: e - _"
+        "LLM type": "deepseek-reasoner",
+        "Target word": "totem",
+        "Guessed word": "tiled",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: t - G\nPosition 2: i - _\nPosition 3: l - _\nPosition 4: e - G\nPosition 5: d - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "daisy",
+        "LLM type": "deepseek-reasoner",
+        "Target word": "ratio",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "ratio",
+        "Guessed word": "party",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: p - _\nPosition 2: a - G\nPosition 3: r - Y\nPosition 4: t - Y\nPosition 5: y - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "ratio",
+        "Guessed word": "ratio",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: r - G\nPosition 2: a - G\nPosition 3: t - G\nPosition 4: i - G\nPosition 5: o - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "shown",
+        "Guessed word": "slate",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: t - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "shown",
+        "Guessed word": "spicy",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: p - _\nPosition 3: i - _\nPosition 4: c - _\nPosition 5: y - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "shown",
+        "Guessed word": "sound",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - G\nPosition 2: o - Y\nPosition 3: u - _\nPosition 4: n - Y\nPosition 5: d - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "shown",
+        "Guessed word": "shown",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: h - G\nPosition 3: o - G\nPosition 4: w - G\nPosition 5: n - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "bleed",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "bleed",
+        "Guessed word": "phone",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: p - _\nPosition 2: h - _\nPosition 3: o - _\nPosition 4: n - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "bleed",
+        "Guessed word": "elegy",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: e - Y\nPosition 2: l - G\nPosition 3: e - G\nPosition 4: g - _\nPosition 5: y - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "bleed",
+        "Guessed word": "bleed",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: b - G\nPosition 2: l - G\nPosition 3: e - G\nPosition 4: e - G\nPosition 5: d - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "ramen",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 4,
+        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: n - Y\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "ramen",
+        "Guessed word": "saner",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - _\nPosition 2: a - G\nPosition 3: n - Y\nPosition 4: e - G\nPosition 5: r - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "ramen",
+        "Guessed word": "raven",
+        "Number of 'G' in colorised results": 4,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: r - G\nPosition 2: a - G\nPosition 3: v - _\nPosition 4: e - G\nPosition 5: n - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "saint",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - G\nPosition 2: t - Y\nPosition 3: a - Y\nPosition 4: r - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "saint",
+        "Guessed word": "satin",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: s - G\nPosition 2: a - G\nPosition 3: t - Y\nPosition 4: i - Y\nPosition 5: n - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "saint",
+        "Guessed word": "saint",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: a - G\nPosition 3: i - G\nPosition 4: n - G\nPosition 5: t - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "viola",
         "Guessed word": "crane",
         "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 1,
@@ -1702,98 +1142,508 @@
     {
         "Global attempt #": 1,
         "Run #": 2,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "daisy",
-        "Guessed word": "fuzzy",
-        "Number of 'G' in colorised results": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "viola",
+        "Guessed word": "salty",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - _\nPosition 2: a - Y\nPosition 3: l - Y\nPosition 4: t - _\nPosition 5: y - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "viola",
+        "Guessed word": "staid",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - Y\nPosition 4: i - Y\nPosition 5: d - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "viola",
+        "Guessed word": "alibi",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: a - Y\nPosition 2: l - Y\nPosition 3: i - Y\nPosition 4: b - _\nPosition 5: i - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "viola",
+        "Guessed word": "alibi",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: a - Y\nPosition 2: l - Y\nPosition 3: i - Y\nPosition 4: b - _\nPosition 5: i - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "naval",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - Y\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "naval",
+        "Guessed word": "angst",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: a - Y\nPosition 2: n - Y\nPosition 3: g - _\nPosition 4: s - _\nPosition 5: t - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "naval",
+        "Guessed word": "final",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: f - _\nPosition 2: i - _\nPosition 3: n - Y\nPosition 4: a - G\nPosition 5: l - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "naval",
+        "Guessed word": "naval",
+        "Number of 'G' in colorised results": 5,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: u - _\nPosition 3: z - _\nPosition 4: z - _\nPosition 5: y - G"
+        "Feedback": "Position 1: n - G\nPosition 2: a - G\nPosition 3: v - G\nPosition 4: a - G\nPosition 5: l - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "chief",
+        "Guessed word": "stare",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "chief",
+        "Guessed word": "melon",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: m - _\nPosition 2: e - Y\nPosition 3: l - _\nPosition 4: o - _\nPosition 5: n - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "deepseek-reasoner",
+        "Target word": "chief",
+        "Guessed word": "chief",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: c - G\nPosition 2: h - G\nPosition 3: i - G\nPosition 4: e - G\nPosition 5: f - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "loser",
+        "Guessed word": "arise",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: a - _\nPosition 2: r - Y\nPosition 3: i - _\nPosition 4: s - Y\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "loser",
+        "Guessed word": "brims",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: b - _\nPosition 2: r - Y\nPosition 3: i - _\nPosition 4: m - _\nPosition 5: s - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
         "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "daisy",
-        "Guessed word": "sling",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - Y\nPosition 2: l - _\nPosition 3: i - G\nPosition 4: n - _\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "daisy",
-        "Guessed word": "dying",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: d - G\nPosition 2: y - Y\nPosition 3: i - G\nPosition 4: n - _\nPosition 5: g - _"
+        "Target word": "loser",
+        "Guessed word": "store",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 4,
+        "Feedback": "Position 1: s - Y\nPosition 2: t - _\nPosition 3: o - Y\nPosition 4: r - Y\nPosition 5: e - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
         "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
-        "Target word": "daisy",
-        "Guessed word": "gypsy",
+        "Target word": "loser",
+        "Guessed word": "store",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 4,
+        "Feedback": "Position 1: s - Y\nPosition 2: t - _\nPosition 3: o - Y\nPosition 4: r - Y\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "glove",
+        "Guessed word": "arise",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: a - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: s - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "glove",
+        "Guessed word": "young",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: y - _\nPosition 2: o - Y\nPosition 3: u - _\nPosition 4: n - _\nPosition 5: g - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "glove",
+        "Guessed word": "globe",
+        "Number of 'G' in colorised results": 4,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: g - G\nPosition 2: l - G\nPosition 3: o - G\nPosition 4: b - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "plant",
+        "Guessed word": "adieu",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: a - Y\nPosition 2: d - _\nPosition 3: i - _\nPosition 4: e - _\nPosition 5: u - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "plant",
+        "Guessed word": "canal",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: c - _\nPosition 2: a - Y\nPosition 3: n - Y\nPosition 4: a - _\nPosition 5: l - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "plant",
+        "Guessed word": "banal",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: b - _\nPosition 2: a - Y\nPosition 3: n - Y\nPosition 4: a - _\nPosition 5: l - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "plant",
+        "Guessed word": "glans",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: g - _\nPosition 2: l - G\nPosition 3: a - G\nPosition 4: n - G\nPosition 5: s - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "plant",
+        "Guessed word": "plant",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: p - G\nPosition 2: l - G\nPosition 3: a - G\nPosition 4: n - G\nPosition 5: t - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "flood",
+        "Guessed word": "notes",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: n - _\nPosition 2: o - Y\nPosition 3: t - _\nPosition 4: e - _\nPosition 5: s - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "flood",
+        "Guessed word": "could",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: c - _\nPosition 2: o - Y\nPosition 3: u - _\nPosition 4: l - Y\nPosition 5: d - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "flood",
+        "Guessed word": "radio",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: r - _\nPosition 2: a - _\nPosition 3: d - Y\nPosition 4: i - _\nPosition 5: o - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "fixer",
+        "Guessed word": "raise",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: r - Y\nPosition 2: a - _\nPosition 3: i - Y\nPosition 4: s - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "fixer",
+        "Guessed word": "inert",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: i - Y\nPosition 2: n - _\nPosition 3: e - Y\nPosition 4: r - Y\nPosition 5: t - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "break",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: c - _\nPosition 2: r - G\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "break",
+        "Guessed word": "bride",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: b - G\nPosition 2: r - G\nPosition 3: i - _\nPosition 4: d - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "aorta",
+        "Guessed word": "raise",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: r - Y\nPosition 2: a - Y\nPosition 3: i - _\nPosition 4: s - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "aorta",
+        "Guessed word": "ranch",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: r - Y\nPosition 2: a - Y\nPosition 3: n - _\nPosition 4: c - _\nPosition 5: h - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "heart",
+        "Guessed word": "arise",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: a - Y\nPosition 2: r - Y\nPosition 3: i - _\nPosition 4: s - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "heart",
+        "Guessed word": "argue",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: a - Y\nPosition 2: r - Y\nPosition 3: g - _\nPosition 4: u - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "heart",
+        "Guessed word": "realm",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: r - Y\nPosition 2: e - G\nPosition 3: a - G\nPosition 4: l - _\nPosition 5: m - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "heart",
+        "Guessed word": "react",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: r - Y\nPosition 2: e - G\nPosition 3: a - G\nPosition 4: c - _\nPosition 5: t - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "heart",
+        "Guessed word": "reach",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: r - Y\nPosition 2: e - G\nPosition 3: a - G\nPosition 4: c - _\nPosition 5: h - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "alive",
+        "Guessed word": "arise",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: a - G\nPosition 2: r - _\nPosition 3: i - G\nPosition 4: s - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "alive",
+        "Guessed word": "agile",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: a - G\nPosition 2: g - _\nPosition 3: i - G\nPosition 4: l - Y\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "alive",
+        "Guessed word": "agile",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: a - G\nPosition 2: g - _\nPosition 3: i - G\nPosition 4: l - Y\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "alive",
+        "Guessed word": "alive",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: a - G\nPosition 2: l - G\nPosition 3: i - G\nPosition 4: v - G\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "leaky",
+        "Guessed word": "arise",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: a - Y\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: s - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "leaky",
+        "Guessed word": "began",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: b - _\nPosition 2: e - G\nPosition 3: g - _\nPosition 4: a - Y\nPosition 5: n - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "leaky",
+        "Guessed word": "eagle",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: e - Y\nPosition 2: a - Y\nPosition 3: g - _\nPosition 4: l - Y\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "leaky",
+        "Guessed word": "ledge",
         "Number of 'G' in colorised results": 2,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: y - _\nPosition 3: p - _\nPosition 4: s - G\nPosition 5: y - G"
+        "Feedback": "Position 1: l - G\nPosition 2: e - G\nPosition 3: d - _\nPosition 4: g - _\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 5,
+        "LLM type": "gemini-2.0-flash-thinking-exp-01-21",
+        "Target word": "leaky",
+        "Guessed word": "leafy",
+        "Number of 'G' in colorised results": 4,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: l - G\nPosition 2: e - G\nPosition 3: a - G\nPosition 4: f - _\nPosition 5: y - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "o1",
-        "Target word": "while",
+        "Target word": "maple",
         "Guessed word": "crane",
         "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - G"
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 2,
         "LLM type": "o1",
-        "Target word": "while",
-        "Guessed word": "fudge",
-        "Number of 'G' in colorised results": 1,
+        "Target word": "maple",
+        "Guessed word": "baste",
+        "Number of 'G' in colorised results": 2,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: u - _\nPosition 3: d - _\nPosition 4: g - _\nPosition 5: e - G"
+        "Feedback": "Position 1: b - _\nPosition 2: a - G\nPosition 3: s - _\nPosition 4: t - _\nPosition 5: e - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
         "LLM type": "o1",
-        "Target word": "while",
-        "Guessed word": "grasp",
-        "Number of 'G' in colorised results": 0,
+        "Target word": "maple",
+        "Guessed word": "maize",
+        "Number of 'G' in colorised results": 3,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: s - _\nPosition 5: p - _"
+        "Feedback": "Position 1: m - G\nPosition 2: a - G\nPosition 3: i - _\nPosition 4: z - _\nPosition 5: e - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
         "LLM type": "o1",
-        "Target word": "while",
-        "Guessed word": "fling",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: f - _\nPosition 2: l - Y\nPosition 3: i - G\nPosition 4: n - _\nPosition 5: g - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "o1",
-        "Target word": "while",
-        "Guessed word": "glory",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: l - Y\nPosition 3: o - _\nPosition 4: r - _\nPosition 5: y - _"
+        "Target word": "maple",
+        "Guessed word": "maple",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: m - G\nPosition 2: a - G\nPosition 3: p - G\nPosition 4: l - G\nPosition 5: e - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "o1",
-        "Target word": "kebab",
+        "Target word": "asset",
         "Guessed word": "crane",
         "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 2,
@@ -1803,400 +1653,330 @@
         "Global attempt #": 1,
         "Run #": 2,
         "LLM type": "o1",
-        "Target word": "kebab",
-        "Guessed word": "slyly",
+        "Target word": "asset",
+        "Guessed word": "plead",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: l - _\nPosition 3: y - _\nPosition 4: l - _\nPosition 5: y - _"
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: e - Y\nPosition 4: a - Y\nPosition 5: d - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
         "LLM type": "o1",
-        "Target word": "kebab",
-        "Guessed word": "coyly",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: o - _\nPosition 3: y - _\nPosition 4: l - _\nPosition 5: y - _"
+        "Target word": "asset",
+        "Guessed word": "aegis",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: a - G\nPosition 2: e - Y\nPosition 3: g - _\nPosition 4: i - _\nPosition 5: s - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
         "LLM type": "o1",
-        "Target word": "kebab",
-        "Guessed word": "sorry",
-        "Number of 'G' in colorised results": 0,
+        "Target word": "asset",
+        "Guessed word": "askew",
+        "Number of 'G' in colorised results": 3,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: o - _\nPosition 3: r - _\nPosition 4: r - _\nPosition 5: y - _"
+        "Feedback": "Position 1: a - G\nPosition 2: s - G\nPosition 3: k - _\nPosition 4: e - G\nPosition 5: w - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
         "LLM type": "o1",
-        "Target word": "kebab",
-        "Guessed word": "fuzzy",
-        "Number of 'G' in colorised results": 0,
+        "Target word": "asset",
+        "Guessed word": "asset",
+        "Number of 'G' in colorised results": 5,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: u - _\nPosition 3: z - _\nPosition 4: z - _\nPosition 5: y - _"
+        "Feedback": "Position 1: a - G\nPosition 2: s - G\nPosition 3: s - G\nPosition 4: e - G\nPosition 5: t - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "o1",
-        "Target word": "cacao",
+        "Target word": "piano",
         "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - G\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - _"
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: n - G\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 2,
         "LLM type": "o1",
-        "Target word": "cacao",
-        "Guessed word": "gypsy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: y - _\nPosition 3: p - _\nPosition 4: s - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "o1",
-        "Target word": "cacao",
-        "Guessed word": "gravy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "o1",
-        "Target word": "cacao",
-        "Guessed word": "fuzzy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: u - _\nPosition 3: z - _\nPosition 4: z - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "o1",
-        "Target word": "cacao",
-        "Guessed word": "dandy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: d - _\nPosition 2: a - G\nPosition 3: n - _\nPosition 4: d - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "o1",
-        "Target word": "beget",
-        "Guessed word": "brine",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: b - G\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "o1",
-        "Target word": "beget",
-        "Guessed word": "gravy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - Y\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: v - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "o1",
-        "Target word": "beget",
-        "Guessed word": "grind",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - Y\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: n - _\nPosition 5: d - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "o1",
-        "Target word": "beget",
-        "Guessed word": "gravy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - Y\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: v - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "o1",
-        "Target word": "debug",
-        "Guessed word": "train",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: t - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: i - _\nPosition 5: n - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "o1",
-        "Target word": "debug",
-        "Guessed word": "sharp",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: h - _\nPosition 3: a - _\nPosition 4: r - _\nPosition 5: p - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "o1",
-        "Target word": "debug",
-        "Guessed word": "plate",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: p - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: t - _\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "o1",
-        "Target word": "debug",
+        "Target word": "piano",
         "Guessed word": "slant",
-        "Number of 'G' in colorised results": 0,
+        "Number of 'G' in colorised results": 2,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: t - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "o1",
-        "Target word": "death",
-        "Guessed word": "brave",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: b - _\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: v - _\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "o1",
-        "Target word": "death",
-        "Guessed word": "grimy",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: i - _\nPosition 4: m - _\nPosition 5: y - _"
+        "Feedback": "Position 1: s - _\nPosition 2: l - _\nPosition 3: a - G\nPosition 4: n - G\nPosition 5: t - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
         "LLM type": "o1",
-        "Target word": "death",
-        "Guessed word": "crony",
-        "Number of 'G' in colorised results": 0,
+        "Target word": "piano",
+        "Guessed word": "piano",
+        "Number of 'G' in colorised results": 5,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: o - _\nPosition 4: n - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "o1",
-        "Target word": "death",
-        "Guessed word": "gravy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: v - _\nPosition 5: y - _"
+        "Feedback": "Position 1: p - G\nPosition 2: i - G\nPosition 3: a - G\nPosition 4: n - G\nPosition 5: o - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "o1",
-        "Target word": "canoe",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: c - G\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - Y\nPosition 5: e - G"
+        "Target word": "print",
+        "Guessed word": "trace",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: t - Y\nPosition 2: r - G\nPosition 3: a - _\nPosition 4: c - _\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 2,
         "LLM type": "o1",
-        "Target word": "canoe",
-        "Guessed word": "story",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: o - Y\nPosition 4: r - _\nPosition 5: y - _"
+        "Target word": "print",
+        "Guessed word": "frost",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: f - _\nPosition 2: r - G\nPosition 3: o - _\nPosition 4: s - _\nPosition 5: t - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
         "LLM type": "o1",
-        "Target word": "canoe",
-        "Guessed word": "glory",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - _\nPosition 2: l - _\nPosition 3: o - Y\nPosition 4: r - _\nPosition 5: y - _"
+        "Target word": "print",
+        "Guessed word": "brunt",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: b - _\nPosition 2: r - G\nPosition 3: u - _\nPosition 4: n - G\nPosition 5: t - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 4,
         "LLM type": "o1",
-        "Target word": "canoe",
-        "Guessed word": "fuzzy",
-        "Number of 'G' in colorised results": 0,
+        "Target word": "print",
+        "Guessed word": "print",
+        "Number of 'G' in colorised results": 5,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: f - _\nPosition 2: u - _\nPosition 3: z - _\nPosition 4: z - _\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "o1",
-        "Target word": "canoe",
-        "Guessed word": "shiny",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: h - _\nPosition 3: i - _\nPosition 4: n - Y\nPosition 5: y - _"
+        "Feedback": "Position 1: p - G\nPosition 2: r - G\nPosition 3: i - G\nPosition 4: n - G\nPosition 5: t - G"
     },
     {
         "Global attempt #": 1,
         "Run #": 1,
         "LLM type": "o1",
-        "Target word": "gaudy",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "o1",
-        "Target word": "gaudy",
-        "Guessed word": "beady",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: b - _\nPosition 2: e - _\nPosition 3: a - Y\nPosition 4: d - G\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "o1",
-        "Target word": "gaudy",
-        "Guessed word": "ready",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: r - _\nPosition 2: e - _\nPosition 3: a - Y\nPosition 4: d - G\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "o1",
-        "Target word": "gaudy",
-        "Guessed word": "slimy",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: s - _\nPosition 2: l - _\nPosition 3: i - _\nPosition 4: m - _\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "o1",
-        "Target word": "gaudy",
-        "Guessed word": "gravy",
-        "Number of 'G' in colorised results": 2,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: g - G\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: v - _\nPosition 5: y - G"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "o1",
-        "Target word": "index",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - Y\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 2,
-        "LLM type": "o1",
-        "Target word": "index",
+        "Target word": "crust",
         "Guessed word": "slate",
         "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: t - _\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 3,
-        "LLM type": "o1",
-        "Target word": "index",
-        "Guessed word": "stony",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: o - _\nPosition 4: n - Y\nPosition 5: y - _"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 4,
-        "LLM type": "o1",
-        "Target word": "index",
-        "Guessed word": "stone",
-        "Number of 'G' in colorised results": 0,
         "Number of 'Y' in colorised results": 2,
-        "Feedback": "Position 1: s - _\nPosition 2: t - _\nPosition 3: o - _\nPosition 4: n - Y\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 5,
-        "LLM type": "o1",
-        "Target word": "index",
-        "Guessed word": "trace",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: t - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: c - _\nPosition 5: e - Y"
-    },
-    {
-        "Global attempt #": 1,
-        "Run #": 1,
-        "LLM type": "o1",
-        "Target word": "movie",
-        "Guessed word": "crane",
-        "Number of 'G' in colorised results": 1,
-        "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - _\nPosition 5: e - G"
+        "Feedback": "Position 1: s - Y\nPosition 2: l - _\nPosition 3: a - _\nPosition 4: t - Y\nPosition 5: e - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 2,
         "LLM type": "o1",
-        "Target word": "movie",
-        "Guessed word": "sling",
-        "Number of 'G' in colorised results": 0,
-        "Number of 'Y' in colorised results": 1,
-        "Feedback": "Position 1: s - _\nPosition 2: l - _\nPosition 3: i - Y\nPosition 4: n - _\nPosition 5: g - _"
+        "Target word": "crust",
+        "Guessed word": "trios",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: t - Y\nPosition 2: r - G\nPosition 3: i - _\nPosition 4: o - _\nPosition 5: s - Y"
     },
     {
         "Global attempt #": 1,
         "Run #": 3,
         "LLM type": "o1",
-        "Target word": "movie",
-        "Guessed word": "glyph",
-        "Number of 'G' in colorised results": 0,
+        "Target word": "crust",
+        "Guessed word": "crust",
+        "Number of 'G' in colorised results": 5,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: g - _\nPosition 2: l - _\nPosition 3: y - _\nPosition 4: p - _\nPosition 5: h - _"
+        "Feedback": "Position 1: c - G\nPosition 2: r - G\nPosition 3: u - G\nPosition 4: s - G\nPosition 5: t - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "o1",
+        "Target word": "tweak",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - Y\nPosition 4: n - _\nPosition 5: e - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "o1",
+        "Target word": "tweak",
+        "Guessed word": "steal",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: s - _\nPosition 2: t - Y\nPosition 3: e - G\nPosition 4: a - G\nPosition 5: l - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "o1",
+        "Target word": "tweak",
+        "Guessed word": "wheat",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: w - Y\nPosition 2: h - _\nPosition 3: e - G\nPosition 4: a - G\nPosition 5: t - Y"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "o1",
+        "Target word": "tweak",
+        "Guessed word": "tweak",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: t - G\nPosition 2: w - G\nPosition 3: e - G\nPosition 4: a - G\nPosition 5: k - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "o1",
+        "Target word": "manor",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 0,
+        "Number of 'Y' in colorised results": 3,
+        "Feedback": "Position 1: c - _\nPosition 2: r - Y\nPosition 3: a - Y\nPosition 4: n - Y\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "o1",
+        "Target word": "manor",
+        "Guessed word": "rants",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: r - Y\nPosition 2: a - G\nPosition 3: n - G\nPosition 4: t - _\nPosition 5: s - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "o1",
+        "Target word": "manor",
+        "Guessed word": "manor",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: m - G\nPosition 2: a - G\nPosition 3: n - G\nPosition 4: o - G\nPosition 5: r - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "o1",
+        "Target word": "print",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: c - _\nPosition 2: r - G\nPosition 3: a - _\nPosition 4: n - G\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "o1",
+        "Target word": "print",
+        "Guessed word": "brine",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: b - _\nPosition 2: r - G\nPosition 3: i - G\nPosition 4: n - G\nPosition 5: e - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "o1",
+        "Target word": "print",
+        "Guessed word": "drink",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: d - _\nPosition 2: r - G\nPosition 3: i - G\nPosition 4: n - G\nPosition 5: k - _"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "o1",
+        "Target word": "print",
+        "Guessed word": "wring",
+        "Number of 'G' in colorised results": 3,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: w - _\nPosition 2: r - G\nPosition 3: i - G\nPosition 4: n - G\nPosition 5: g - _"
     },
     {
         "Global attempt #": 1,
         "Run #": 5,
         "LLM type": "o1",
-        "Target word": "movie",
-        "Guessed word": "dryly",
-        "Number of 'G' in colorised results": 0,
+        "Target word": "print",
+        "Guessed word": "print",
+        "Number of 'G' in colorised results": 5,
         "Number of 'Y' in colorised results": 0,
-        "Feedback": "Position 1: d - _\nPosition 2: r - _\nPosition 3: y - _\nPosition 4: l - _\nPosition 5: y - _"
+        "Feedback": "Position 1: p - G\nPosition 2: r - G\nPosition 3: i - G\nPosition 4: n - G\nPosition 5: t - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "o1",
+        "Target word": "unite",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - _\nPosition 4: n - Y\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "o1",
+        "Target word": "unite",
+        "Guessed word": "binge",
+        "Number of 'G' in colorised results": 1,
+        "Number of 'Y' in colorised results": 2,
+        "Feedback": "Position 1: b - _\nPosition 2: i - Y\nPosition 3: n - Y\nPosition 4: g - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "o1",
+        "Target word": "unite",
+        "Guessed word": "noise",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 1,
+        "Feedback": "Position 1: n - Y\nPosition 2: o - _\nPosition 3: i - G\nPosition 4: s - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 4,
+        "LLM type": "o1",
+        "Target word": "unite",
+        "Guessed word": "unite",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: u - G\nPosition 2: n - G\nPosition 3: i - G\nPosition 4: t - G\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 1,
+        "LLM type": "o1",
+        "Target word": "spade",
+        "Guessed word": "crane",
+        "Number of 'G' in colorised results": 2,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: c - _\nPosition 2: r - _\nPosition 3: a - G\nPosition 4: n - _\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 2,
+        "LLM type": "o1",
+        "Target word": "spade",
+        "Guessed word": "shade",
+        "Number of 'G' in colorised results": 4,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: h - _\nPosition 3: a - G\nPosition 4: d - G\nPosition 5: e - G"
+    },
+    {
+        "Global attempt #": 1,
+        "Run #": 3,
+        "LLM type": "o1",
+        "Target word": "spade",
+        "Guessed word": "spade",
+        "Number of 'G' in colorised results": 5,
+        "Number of 'Y' in colorised results": 0,
+        "Feedback": "Position 1: s - G\nPosition 2: p - G\nPosition 3: a - G\nPosition 4: d - G\nPosition 5: e - G"
     }
 ]
