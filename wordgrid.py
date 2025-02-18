@@ -1,11 +1,9 @@
 import os
 import re
 import json
-import enchant
+import llm
 from dotenv import load_dotenv
 load_dotenv()
-
-import llm
 
 with open('info.json', 'r') as file:
     data = json.load(file)
