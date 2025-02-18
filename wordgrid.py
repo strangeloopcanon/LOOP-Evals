@@ -129,7 +129,7 @@ def main(attempt_number, objective, llm_type):
     return results
 
 def repeatedly_run_main():
-    objective_keys = ['objective_4', 'objective_5']
+    objective_keys = ['objective_5']
     llm_types = ['chatgpt-4o-latest', 'claude-3-5-sonnet-latest', 'deepseek-reasoner', 'gemini-2.0-flash-thinking-exp-01-21', 'o1']  # add others as needed
 
     all_results = {}
