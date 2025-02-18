@@ -94,7 +94,7 @@ def main():
     plt.tight_layout()
     os.makedirs('charts', exist_ok=True)
     plt.savefig('charts/wordle_success_rate_by_model.png')
-    plt.show()
+    # plt.show()
 
     # ========== Plot 2: Avg Attempts by Model (Successful Games) ==========
     plt.figure(figsize=(8, 5))
@@ -106,7 +106,7 @@ def main():
         plt.text(i, v+0.05, f"{v:.2f}", ha='center', fontweight='bold')
     plt.tight_layout()
     plt.savefig('charts/wordle_avg_attempts_success_by_model.png')
-    plt.show()
+    # plt.show()
 
     # ========== Retain old G/Y trend logic if desired ==========
     # For reference, the original code was grouping by "Run #", but that might not isolate each game.
@@ -129,7 +129,7 @@ def main():
     plt.title("G counts per Attempt #, by Model")
     plt.ylim(0, 5)
     plt.savefig("charts/wordle_G_trends_by_model.png")
-    plt.show()
+    # plt.show()
 
     plt.figure(figsize=(10, 6))
     sns.lineplot(
@@ -143,7 +143,7 @@ def main():
     plt.title("Y counts per Attempt #, by Model")
     plt.ylim(0, 5)
     plt.savefig("charts/wordle_Y_trends_by_model.png")
-    plt.show()
+    # plt.show()
 
     print("\nAnalysis complete. Charts have been saved in the 'charts/' folder.")
 
