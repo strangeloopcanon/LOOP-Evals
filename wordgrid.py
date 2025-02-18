@@ -28,11 +28,13 @@ def create_word_matrix(objective, llm_type):
     """
     # Now we just treat llm_type as the actual model name:
     prompt = f"""{instructions}. Objective is: {objective}.
-The words have to be valid English words when read across rows and also down the columns.
-Reply as JSON, for example:
-'''
-Word, Word, Word...
-'''
+The words have to be valid English words when read across rows and also down the columns. As you place each word, verify that it forms valid words both horizontally and vertically. Double-check that all words in the grid are valid English words. Verify that the grid meets all specified constraints before finalizing your answer.
+
+Your final output should be in JSON format, with each word representing a row in the grid. For example:
+
+```json
+["WORD", "WORD", "WORD", "WORD"]
+```
 """
     return get_llm_response(prompt, llm_type)
 
@@ -45,11 +47,13 @@ def regenerate_invalid_words(invalid_words, original_matrix, objective, llm_type
 {original_matrix}
 But this contained invalid words {invalid_words} when read across rows and columns.
 Let's fix this. Objective is: {objective}.
-The words must be valid English words (rows & columns). 
-Reply with the final list in the same format:
-'''
-Word, Word, ...
-'''
+The words have to be valid English words when read across rows and also down the columns. As you place each word, verify that it forms valid words both horizontally and vertically. Double-check that all words in the grid are valid English words. Verify that the grid meets all specified constraints before finalizing your answer.
+
+Your final output should be in JSON format, with each word representing a row in the grid. For example:
+
+```json
+["WORD", "WORD", "WORD", "WORD"]
+```
 """
     return get_llm_response(regeneration_prompt, llm_type)
 
