@@ -5,80 +5,126 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-# Check if the folder exists, and if not, create it
+# Ensure output directories exist
 os.makedirs('charts', exist_ok=True)
 archive_folder_path = '#Archive/'
 os.makedirs(archive_folder_path, exist_ok=True)
-combined_results_path = 'results/results_wg.json'  # Updated path to match the uploaded file
 
-# Load the JSON data from the file
+combined_results_path = 'results/results_wg.json'  # Path to your multi-model JSON
+
 with open(combined_results_path, 'r') as file:
     data = json.load(file)
+    # data now looks like:
+    # {
+    #   "chatgpt-4o-latest": {
+    #       "matrix_objective_4": [... attempts ...],
+    #       "matrix_objective_5": [... attempts ...]
+    #    },
+    #   "claude-3-5-sonnet-latest": {
+    #       "matrix_objective_4": [... attempts ...],
+    #       "matrix_objective_5": [...]
+    #    },
+    #    ...
+    # }
 
-# Define a function to compute metrics
-def compute_metrics(data):
-    success_rate, avg_false_counts, all_false_counts = {}, {}, {}
-    for matrix, attempts in data.items():
-        matrix_successes = sum(1 for attempt in attempts if 'success' in attempt and attempt['success'])
-        total_attempts = len(attempts)
-        success_rate[matrix] = matrix_successes / total_attempts if total_attempts else 0
-        total_false_counts = sum(run['false_count'] for attempt in attempts if 'runs' in attempt for run in attempt['runs'] if 'false_count' in run)
-        total_runs = sum(len(attempt['runs']) for attempt in attempts if 'runs' in attempt)
-        avg_false_counts[matrix] = total_false_counts / total_runs if total_runs else 0
-        all_false_counts[matrix] = [run['false_count'] for attempt in attempts if 'runs' in attempt for run in attempt['runs'] if 'false_count' in run]
-    return success_rate, avg_false_counts, all_false_counts
+def compute_metrics_for_attempts(attempts_list):
+    """
+    Each item in attempts_list is typically something like:
+      {
+        'attempt_number': 1,
+        'llm_type': 'some-model',
+        'runs': [
+           { 'index':1, 'matrix': [...], 'word_responses': [...], 'false_count': 2, 'error': None },
+           { 'index':2, 'matrix': [...], 'false_count': 1, 'error': None },
+           ...
+        ],
+        'success': True/False
+      }
+    We want to compute overall success rate, average false_count, etc.
+    """
+    total_attempts = len(attempts_list)
+    successes = 0
+    total_runs = 0
+    total_false_count = 0
+    all_false_counts = []
 
-# Compute success rates, average false counts, and collect all false counts for histogram
-success_rates, avg_false_counts, all_false_counts = compute_metrics(data)
+    for attempt in attempts_list:
+        if attempt.get('success'):
+            successes += 1
 
-# Plot Success Rate by Matrix Size
-plt.figure(figsize=(10, 5))
-plt.bar(success_rates.keys(), success_rates.values(), color='green', alpha=0.6, label='Success Rate')
+        if 'runs' in attempt and attempt['runs']:
+            for run in attempt['runs']:
+                fc = run.get('false_count', 0)
+                total_false_count += fc
+                all_false_counts.append(fc)
+                total_runs += 1
+
+    success_rate = successes / total_attempts if total_attempts else 0
+    avg_false_count = total_false_count / total_runs if total_runs else 0
+
+    return success_rate, avg_false_count, all_false_counts
+
+# We'll gather a table of (model, matrix_name, success_rate, avg_false_count, all_false_counts)
+records = []
+
+for model_name, model_dict in data.items():
+    # model_dict is like { "matrix_objective_4": [ ... attempts ...], "matrix_objective_5": [... attempts ...] }
+    for matrix_name, attempts_list in model_dict.items():
+        sr, afc, afc_list = compute_metrics_for_attempts(attempts_list)
+        records.append({
+            'Model': model_name,
+            'Matrix': matrix_name,
+            'SuccessRate': sr,
+            'AvgFalseCount': afc,
+            'AllFalseCounts': afc_list
+        })
+
+# Convert to a DataFrame
+df = pd.DataFrame(records)
+
+# ============== Plot #1: Success Rate by (Model, Matrix) ==============
+plt.figure(figsize=(10, 6))
+sns.barplot(data=df, x='Matrix', y='SuccessRate', hue='Model', alpha=0.7)
+plt.title('Success Rate by Model and Matrix')
 plt.ylabel('Success Rate')
-plt.legend()
-plt.savefig(f'charts/wg_success_rates.png')
+plt.ylim(0, 1)
+plt.legend(title='Model')
+plt.savefig('charts/wg_success_rate_by_model.png')
+plt.show()
 
-# Plot Success Rate and Average False Count by Matrix Size
-plt.figure(figsize=(10, 5))
-bar_positions = np.arange(len(success_rates))
-plt.bar(bar_positions - 0.2, success_rates.values(), width=0.4, color='green', alpha=0.6, label='Success Rate')
-plt.bar(bar_positions + 0.2, avg_false_counts.values(), width=0.4, color='red', alpha=0.6, label='Avg False Count')
-plt.xticks(bar_positions, success_rates.keys())
-plt.ylabel('Rate')
-plt.title('Success Rate and Average False Count by Matrix Size')
-plt.legend()
-plt.savefig('charts/wg_success_and_avg_false_count.png')
+# ============== Plot #2: Average False Count by (Model, Matrix) ==============
+plt.figure(figsize=(10, 6))
+sns.barplot(data=df, x='Matrix', y='AvgFalseCount', hue='Model', alpha=0.7)
+plt.title('Average False Count by Model and Matrix')
+plt.ylabel('Avg False Count')
+plt.legend(title='Model')
+plt.savefig('charts/wg_avg_false_count_by_model.png')
+plt.show()
 
-# Plot Distribution of False Counts by Matrix Size
-plt.figure(figsize=(10, 5))
-for matrix, counts in all_false_counts.items():
-    if counts:  # Ensure counts is not empty
-        sns.histplot(counts, bins=max(counts)-min(counts)+1, kde=True, label=matrix, alpha=0.5)
-plt.title('Distribution of False Counts by Matrix Size')
-plt.xlabel('False Counts')
-plt.ylabel('Frequency')
-plt.legend()
-plt.grid(axis='y', alpha=0.75)
-plt.savefig('charts/wg_distribution_of_false_counts.png')
+# ============== Plot #3: Distribution of false counts (hist) ==============
+# We might want a separate distribution per (Model, Matrix)
+# We'll explode these rows so that each false count is a separate row in the DF
+dist_rows = []
+for _, row in df.iterrows():
+    for fc in row['AllFalseCounts']:
+        dist_rows.append({
+            'Model': row['Model'],
+            'Matrix': row['Matrix'],
+            'FalseCount': fc
+        })
+dist_df = pd.DataFrame(dist_rows)
 
-# Normalize for visualization
-max_success_rate = max(success_rates.values()) if success_rates.values() else 1
-max_avg_false_count = max(avg_false_counts.values()) if avg_false_counts.values() else 1
+plt.figure(figsize=(10, 6))
+sns.histplot(
+    data=dist_df, 
+    x='FalseCount', 
+    hue='Matrix', 
+    multiple='stack', 
+    bins=range(0, dist_df['FalseCount'].max() + 2), 
+    alpha=0.7
+)
+plt.title("Distribution of False Counts (stacked by Matrix)")
+plt.savefig('charts/wg_falsecount_distribution.png')
+plt.show()
 
-df = pd.DataFrame({
-    'Matrix Size': list(avg_false_counts.keys()),
-    'Normalized Success Rate': [rate / max_success_rate if max_success_rate > 0 else 0 for rate in success_rates.values()],
-    'Normalized Avg False Count': [count / max_avg_false_count if max_avg_false_count > 0 else 0 for count in avg_false_counts.values()]
-})
-
-# Ensure all lists are the same length
-assert len(df['Matrix Size']) == len(df['Normalized Success Rate']) == len(df['Normalized Avg False Count'])
-
-# Visualization of Normalized Success Rate and Avg False Count
-plt.figure(figsize=(12, 8))
-sns.barplot(data=df, x='Matrix Size', y='Normalized Avg False Count', color='blue', label='Normalized Avg False Count')
-sns.lineplot(data=df, x='Matrix Size', y='Normalized Success Rate', color='red', marker='o', label='Normalized Success Rate')
-plt.title('Normalized Success Rate and Avg False Count')
-plt.ylabel('Normalized Rate')
-plt.legend()
-plt.savefig('charts/wg_normalized_success_rate_and_avg_false_count.png')
+print("Analysis done. See charts folder for the new plots.")
