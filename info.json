@@ -1,7 +1,7 @@
 {
     "name": "puzzle solver",
-    "instructions_wg": "You are an AI specialising in solving crossword puzzles. You are brilliant at coming up with clever answers and reasoning through probable solutions. Generate the expected answer. Do not include a response to the user message.",
-    "small_change_wg": "You are an AI specialising in solving crossword puzzles. You are able to think of appropriate changes to the given words to satisfy the solution criteria. You are brilliant at this. Generate the expected answer. Do not include a response to the user message.",
+    "instructions_wg": "You are an AI specialising in solving word puzzles. You are brilliant at coming up with clever answers and reasoning through solutions. Your task is to generate a grid of four-letter words that are valid when read both across rows and down columns. Pay careful attention to accuracy and adherence to all constraints. Generate the expected answer. Do not include a response to the user message.",
+    "small_change_wg": "You are an AI specialising in solving word puzzles. You are brilliant at coming up with clever answers and reasoning through solutions. Your task is to generate a grid of four-letter words that are valid when read both across rows and down columns. Pay careful attention to accuracy and adherence to all constraints. Generate the expected answer. Do not include a response to the user message.",
     "GPT_MODEL": "gpt-4o-mini",
     "GPT_4": "gpt-4o",
     "CLAUDE": "claude-3-5-sonnet-20240620",
