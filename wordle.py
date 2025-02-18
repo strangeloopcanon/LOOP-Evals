@@ -76,19 +76,7 @@ def play_wordle(file_path, run_id, llm_type, results):
     max_attempts = 5
     guess_history = []
 
-    # Map llm_type to model name:
-    if llm_type == "openai":
-        model_name = data.get("GPT_MODEL", "gpt-4o-mini")
-    elif llm_type == "claude":
-        model_name = data.get("CLAUDE", "claude-3-5-sonnet-20240620")
-    elif llm_type == "groq":
-        model_name = "groq-model"
-    elif llm_type == "gemini":
-        model_name = data.get("GEMINI", "gemini-1.5-pro")
-    else:
-        model_name = "gpt-4o-mini"
-
-    model = llm.get_model(model_name)
+    model = llm.get_model(llm_type)
 
     while attempts < max_attempts:
         print(f"\nThis is attempt number: {attempts}.")
