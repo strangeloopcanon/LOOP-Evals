@@ -20,7 +20,7 @@ Add your openai api key to .env file, make any edits to info.json if you want to
 Afterwards run analysis_wg.py to do the necessary analysis and make a few pretty charts. Same again for analysis_wordle.py
 
 # Results
-From the wordgrid run on Llama 3, we can see the results, which really aren't spectacular in favour of LLMs. It's very similar for GPT-4 or Claude Opus.
+From the wordgrid run, we can see the results, which really aren't spectacular in favour of LLMs. It's very similar for the reasoning models too.
 ![Surprised? I really was](charts/wg_success_and_avg_false_count.png)
 
 Or
