@@ -1,164 +1,116 @@
 import os
 import json
-import openai
 import enchant
 import random
 from dotenv import load_dotenv
 load_dotenv()
-from llms.llms import llm_call_gpt_json, llm_call_claude_json, llm_call_groq, llm_call_gemini_json
-from utils.retry import retry_except
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+import llm  # <-- new import
+
 with open('info.json', 'r') as file:
     data = json.load(file)
 
-instructions = data.get('instructions_w')
-objective = data.get('objective_w')
-GPT = data.get('GPT_MODEL')
-CLAUDE = data.get('CLAUDE')
-OLLAMA = data.get('OLLAMA')
-GEMINI = data.get('GEMINI')
-
-def get_llm_response(input_str, llm_type='openai'):
-    if llm_type == 'openai':
-        return llm_call_gpt_json(input_str, GPT)
-    elif llm_type == 'claude':
-        return llm_call_claude_json(input_str, CLAUDE)
-    elif llm_type == 'groq':
-        return llm_call_groq(input_str)
-    elif llm_type == 'gemini':
-        return llm_call_gemini_json(input_str)
+instructions = data["instructions_w"]
+objective = data["objective_w"]
 
 def load_words(file_path):
     with open(file_path, 'r') as file:
-        words = [line.strip().lower() for line in file if len(line.strip()) == 5]
-    return words
+        return [line.strip().lower() for line in file if len(line.strip()) == 5]
 
 def colorize_guess(guess, target):
-    """
-    Generate a formatted feedback message for each operation.
+    """Generates G/Y/_ feedback for guess vs. target."""
+    result = ['_'] * 5
+    target_tmp = list(target)
+    feedback_details = []
 
-    Parameters:
-    - position: The position being analyzed or modified.
-    - status: The status code or symbol (e.g., 'G' for correct, 'Y' for incorrect but close, etc.).
-    - description: A descriptive message explaining the status.
-
-    Returns:
-    A formatted string with the feedback.
-    """    
-    GYs = []
-    result = ['_'] * 5  # Placeholder for coloring: '_' = not guessed, 'G' = green, 'Y' = yellow
-    target_tmp = list(target)  # Temp copy to mark letters as used
-    feedback = []  # This will now hold dictionaries with position, letter, and feedback
-
-    # First pass for correct positions
+    # First pass: correct positions
     for i in range(5):
         if guess[i] == target[i]:
             result[i] = 'G'
-            target_tmp[i] = None  # Mark as used
-            feedback.append({'position': i, 'letter': guess[i], 'color': 'G'})  # Record the 'G' feedback with position
+            target_tmp[i] = None
+            feedback_details.append(f"Position {i+1}: {guess[i]} - G")
         else:
-            feedback.append({'position': i, 'letter': guess[i], 'color': '_'})  # Placeholder
-    
-    # Second pass for correct letters in wrong positions
+            feedback_details.append(f"Position {i+1}: {guess[i]} - _")
+
+    # Second pass: correct letter, wrong position
     for i in range(5):
         if guess[i] != target[i] and guess[i] in target_tmp:
             result[i] = 'Y'
-            target_tmp[target_tmp.index(guess[i])] = None  # Mark as used
-            feedback[i]['color'] = 'Y'  # Update the placeholder to 'Y'
-    
-    # Convert result to colored string or another representation for CLI
+            # Mark that letter used
+            index_ = target_tmp.index(guess[i])
+            target_tmp[index_] = None
+            # Update feedback details line
+            feedback_details[i] = f"Position {i+1}: {guess[i]} - Y"
+
     GYs = ''.join(result)
-    detailed_feedback = "\n".join([f"Position {item['position']+1}: {item['letter']} - {item['color']}" for item in feedback])
-    # target_tmp = list(target)  # Temporary copy to mark letters as used
-    
-    # # First pass for correct positions
-    # for i in range(5):
-    #     if guess[i] == target[i]:
-    #         feedback.append({'position': i+1, 'letter': guess[i], 'feedback': 'Correct position and letter (G)'})
-    #         target_tmp[i] = None  # Mark as used
-    #     else:
-    #         feedback.append({'position': i+1, 'letter': guess[i], 'feedback': None})  # Placeholder
-
-    # # Second pass for correct letters in wrong positions
-    # for i in range(5):
-    #     if feedback[i]['feedback'] is None:  # Only check letters not already marked as correct
-    #         if guess[i] in target_tmp:
-    #             feedback[i]['feedback'] = 'Correct letter, wrong position (Y)'
-    #             target_tmp[target_tmp.index(guess[i])] = None  # Mark as used
-    #         else:
-    #             feedback[i]['feedback'] = 'Letter not in the word (_)'
-
-    # # Format the feedback for display or further processing
-    # feedback_details = "\n".join([f"Position {item['position']}: {item['letter']} - {item['feedback']}" for item in feedback])
+    detailed_feedback = "\n".join(feedback_details)
     return GYs, detailed_feedback
 
 def check_word_validity(word):
-    """
-    Check if a word is a valid English word using pyenchant.
-    """
-    if not word:  # Check if the word is empty
+    """Check if word is real English (and not empty)."""
+    if not word:
         return False
-    d = enchant.Dict("en_US")  # or "en_GB" for British English
+    d = enchant.Dict("en_US")
     return d.check(word)
 
-@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError, ValueError), tries=3, delay=2)
-def extract_word(response):
-    if isinstance(response, dict):
-        parsed_response = response
-    else:
-        try:
-            parsed_response = json.loads(response)
-        except json.JSONDecodeError as e:
-            print(f"Failed to decode JSON from response: {e}")
-            return ''
-        except ValueError as e:
-            print(f"ValueError: {e}")
-            return ''
-
-    if isinstance(parsed_response, dict):
-        for key, value in parsed_response.items():
-            if isinstance(value, str):
-                cleaned_response = value.replace('```', '').replace('\n', '').replace("'''", '').strip()
-                print(f"\nExtracted value: {cleaned_response}")  # Debugging: Print the extracted value
-                return cleaned_response
-        print("No suitable string value was found in the response.")
-        return ''
-    else:
-        print("The JSON response did not contain a dictionary as expected.")
-        return ''
+def extract_word(response_str):
+    """
+    Attempt to parse a single guess from the LLM's returned string.
+    """
+    try:
+        # Often the LLM might wrap in JSON
+        parsed = json.loads(response_str)
+        if isinstance(parsed, dict):
+            for key, val in parsed.items():
+                if isinstance(val, str):
+                    return val.strip()
+        return ""
+    except (json.JSONDecodeError, TypeError):
+        # fallback: raw string
+        return response_str.strip()
 
 def play_wordle(file_path, run_id, llm_type, results):
     words = load_words(file_path)
     target = random.choice(words)
     attempts = 0
     max_attempts = 5
-    guess_history = []  # Initialize empty list to store history of guesses and feedback
+    guess_history = []
 
-    while attempts <= max_attempts:
-        print(f"\n This is attempt number: {attempts}. \n")
-        history_str = " ".join(guess_history)
-        input_str = f"{instructions}. {objective}. Based on previous attempts: {history_str}. Only return the word."
+    # Map llm_type to model name:
+    if llm_type == "openai":
+        model_name = data.get("GPT_MODEL", "gpt-4o-mini")
+    elif llm_type == "claude":
+        model_name = data.get("CLAUDE", "claude-3-5-sonnet-20240620")
+    elif llm_type == "groq":
+        model_name = "groq-model"
+    elif llm_type == "gemini":
+        model_name = data.get("GEMINI", "gemini-1.5-pro")
+    else:
+        model_name = "gpt-4o-mini"
 
-        guess_response = get_llm_response(input_str, llm_type=llm_type)
-        guess = extract_word(guess_response).strip().lower()
-        
-        words_validity = check_word_validity(guess)
-        print(f"The validity of the word is: {words_validity}")
-        if len(guess) != 5 or not guess.isalpha() or guess not in words:
-            print("Invalid input or word not in list. Try again.")
-            attempts += 1  # Increment the attempt counter to reflect the attempt
-            if attempts >= max_attempts:  # Check if the maximum attempts have been reached
-                print(f"Maximum attempts reached without guessing the word. The correct word was '{target}'.")
-                break  # Exit the loop if the maximum attempts are reached break
-            continue  # Continue to the next iteration of the loop
+    model = llm.get_model(model_name)
+
+    while attempts < max_attempts:
+        print(f"\nThis is attempt number: {attempts}.")
+        history_str = " | ".join(guess_history)
+
+        prompt_text = f"""{instructions}. {objective}.
+Based on previous attempts: {history_str}
+Only return one 5-letter guess word.
+"""
+        guess_response = model.prompt(prompt_text)
+        guess = extract_word(guess_response.text()).lower()
+
+        if not check_word_validity(guess) or len(guess) != 5:
+            print(f"Invalid guess '{guess}'. Trying next attempt.")
+            attempts += 1
+            continue
 
         attempts += 1
         GYs, feedback_details = colorize_guess(guess, target)
-        print("Feedback on your guess: ", feedback_details)
+        print("Feedback on your guess:\n", feedback_details)
 
-        guess_history.append(f"Attempt {attempts}: {guess} - {feedback_details}")
-
+        guess_history.append(f"Attempt {attempts}: {guess} - {GYs}")
         results.append({
             "Global attempt #": run_id,
             "Run #": attempts,
@@ -170,25 +122,28 @@ def play_wordle(file_path, run_id, llm_type, results):
             "Feedback": feedback_details
         })
 
+        if guess == target:
+            print(f"Correct! The word was '{target}'.")
+            break
+
+    if guess != target:
+        print(f"Ran out of attempts; the word was '{target}'.")
+
 def main():
     runs = int(input("Enter the number of runs: "))
-    attempts_per_llm = 10  # Number of attempts per LLM
+    attempts_per_llm = 10
     results = []
-    llm_types = ['openai'] #['claude', 'openai', 'groq']
+    llm_types = ['chatgpt-4o-latest', 'claude-3-5-sonnet-latest', 'deepseek-reasoner', 'gemini-2.0-flash-thinking-exp-01-21', 'o1']  # add others as needed
 
     for run_id in range(1, runs + 1):
-        for llm_type in llm_types:
-            print(f"\n\n Starting run #{run_id} using {llm_type}")
-            for attempt in range(attempts_per_llm):
-                play_wordle('puzzles/wordle.txt', run_id, llm_type, results)
+        for lt in llm_types:
+            print(f"\n\nStarting run #{run_id} using {lt}")
+            for _ in range(attempts_per_llm):
+                play_wordle('puzzles/wordle.txt', run_id, lt, results)
 
-    # Ensure the results directory exists
     os.makedirs('results', exist_ok=True)
-
-    # Write results to file
     with open('results/results_wordle.json', 'w') as f:
         json.dump(results, f, indent=4)
-
     print("All runs completed. Results stored in 'results/results_wordle.json'.")
 
 if __name__ == '__main__':

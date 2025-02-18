@@ -1,0 +1,1391 @@
+./README.md
+---
+# LOOP-Evals
+Logical Operations On Problems: The idea is to test simple Iterative Reasoning tests for LLMs, through puzzles which are hard to solve and easy to evaluate.
+
+# Why?
+LLMs are hard to evaluate, as [I've written multiple times](https://www.strangeloopcanon.com/p/evaluations-are-all-we-need), and their ability to reason is difficult to separate from what they're trained on. So I wanted to find a way to test its ability to iteratively reason and answer questions. 
+
+I started with the simplest version of it I could think of that satisfies the criteria: namely whether it can create wordgrids, successively in 3x3, 4x4 and 5x5 sizes. Why this? Because evaluations should be a) easy to create, AND b) easy to evaluate, while still being hard to do!
+
+The second is ... Wordle. Same principle!
+
+The third is ... Sudoku! The pastime that was meant to be both fun and a cure for dementia, but seemingly once again surprisingly hard for LLMs to solve!
+
+# How
+Let's start with the wordgrids. First it asks LLMs to create word grids with minimal constraints (starting word starts with C and last word ends with N) in 3 sizes - 3x3, 4x4, and 5x5.
+
+The test is whether they can create them. It tries this over 50 attempts in the attached code, each attempt having 10 turns each, each turn using the previously generated word grid and asking it to think through and edit it such that they're valid.
+
+Add your openai api key to .env file, make any edits to info.json if you want to change anything and run wordgrid.py. By default its set to gpt-4, and runs 50 Attempts with 10 Runs each, feel free to test other groupings 
+
+Afterwards run analysis_wg.py to do the necessary analysis and make a few pretty charts. Same again for analysis_wordle.py
+
+# Results
+From the wordgrid run on Llama 3, we can see the results, which really aren't spectacular in favour of LLMs. It's very similar for GPT-4 or Claude Opus.
+![Surprised? I really was](charts/wg_success_and_avg_false_count.png)
+
+Or
+![False counts by matrix size](charts/wg_distribution_of_false_counts.png)
+
+Similarly, from the wordle run we can see similar trends as well ...
+![It really doesn't like changing predictions a little by little](charts/wordle_avg_GY_trend.png)
+
+![And the number of "good" guesses don't seem to go any higher than base guesswork](charts/wordle_GY_count.png)
+
+# Next steps
+There are many other such evaluations I want to create. Next up is likely sudokus and cipher puzzles, which also require iterative reasoning while also meeting our criteria.
+
+The goal is: a) get a broad set of such evaluations that meaningfully help us understand general reasoning, b) can continue to be useful as LLMs scale and new architectures develop, and c) help us learn how we learn so we can use that reasoning data to maybe teach AI!
+
+I see this as something that will grow across domains and workflows, just as software did and computerisation before that. This is not only essential to the development of AGI, but a crucial area for us to learn how to use AI, this magical new portal into weird intelligence we've developed!
+
+
+---
+./analysis_wg.py
+---
+import os
+import json
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+# Check if the folder exists, and if not, create it
+os.makedirs('charts', exist_ok=True)
+archive_folder_path = '#Archive/'
+os.makedirs(archive_folder_path, exist_ok=True)
+combined_results_path = 'results/results_wg.json'  # Updated path to match the uploaded file
+
+# Load the JSON data from the file
+with open(combined_results_path, 'r') as file:
+    data = json.load(file)
+
+# Define a function to compute metrics
+def compute_metrics(data):
+    success_rate, avg_false_counts, all_false_counts = {}, {}, {}
+    for matrix, attempts in data.items():
+        matrix_successes = sum(1 for attempt in attempts if 'success' in attempt and attempt['success'])
+        total_attempts = len(attempts)
+        success_rate[matrix] = matrix_successes / total_attempts if total_attempts else 0
+        total_false_counts = sum(run['false_count'] for attempt in attempts if 'runs' in attempt for run in attempt['runs'] if 'false_count' in run)
+        total_runs = sum(len(attempt['runs']) for attempt in attempts if 'runs' in attempt)
+        avg_false_counts[matrix] = total_false_counts / total_runs if total_runs else 0
+        all_false_counts[matrix] = [run['false_count'] for attempt in attempts if 'runs' in attempt for run in attempt['runs'] if 'false_count' in run]
+    return success_rate, avg_false_counts, all_false_counts
+
+# Compute success rates, average false counts, and collect all false counts for histogram
+success_rates, avg_false_counts, all_false_counts = compute_metrics(data)
+
+# Plot Success Rate by Matrix Size
+plt.figure(figsize=(10, 5))
+plt.bar(success_rates.keys(), success_rates.values(), color='green', alpha=0.6, label='Success Rate')
+plt.ylabel('Success Rate')
+plt.legend()
+plt.savefig(f'charts/wg_success_rates.png')
+
+# Plot Success Rate and Average False Count by Matrix Size
+plt.figure(figsize=(10, 5))
+bar_positions = np.arange(len(success_rates))
+plt.bar(bar_positions - 0.2, success_rates.values(), width=0.4, color='green', alpha=0.6, label='Success Rate')
+plt.bar(bar_positions + 0.2, avg_false_counts.values(), width=0.4, color='red', alpha=0.6, label='Avg False Count')
+plt.xticks(bar_positions, success_rates.keys())
+plt.ylabel('Rate')
+plt.title('Success Rate and Average False Count by Matrix Size')
+plt.legend()
+plt.savefig('charts/wg_success_and_avg_false_count.png')
+
+# Plot Distribution of False Counts by Matrix Size
+plt.figure(figsize=(10, 5))
+for matrix, counts in all_false_counts.items():
+    if counts:  # Ensure counts is not empty
+        sns.histplot(counts, bins=max(counts)-min(counts)+1, kde=True, label=matrix, alpha=0.5)
+plt.title('Distribution of False Counts by Matrix Size')
+plt.xlabel('False Counts')
+plt.ylabel('Frequency')
+plt.legend()
+plt.grid(axis='y', alpha=0.75)
+plt.savefig('charts/wg_distribution_of_false_counts.png')
+
+# Normalize for visualization
+max_success_rate = max(success_rates.values()) if success_rates.values() else 1
+max_avg_false_count = max(avg_false_counts.values()) if avg_false_counts.values() else 1
+
+df = pd.DataFrame({
+    'Matrix Size': list(avg_false_counts.keys()),
+    'Normalized Success Rate': [rate / max_success_rate if max_success_rate > 0 else 0 for rate in success_rates.values()],
+    'Normalized Avg False Count': [count / max_avg_false_count if max_avg_false_count > 0 else 0 for count in avg_false_counts.values()]
+})
+
+# Ensure all lists are the same length
+assert len(df['Matrix Size']) == len(df['Normalized Success Rate']) == len(df['Normalized Avg False Count'])
+
+# Visualization of Normalized Success Rate and Avg False Count
+plt.figure(figsize=(12, 8))
+sns.barplot(data=df, x='Matrix Size', y='Normalized Avg False Count', color='blue', label='Normalized Avg False Count')
+sns.lineplot(data=df, x='Matrix Size', y='Normalized Success Rate', color='red', marker='o', label='Normalized Success Rate')
+plt.title('Normalized Success Rate and Avg False Count')
+plt.ylabel('Normalized Rate')
+plt.legend()
+plt.savefig('charts/wg_normalized_success_rate_and_avg_false_count.png')
+
+
+---
+./analysis_wordle.py
+---
+import json
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the JSON data
+file_path = 'results/results_wordle.json'
+with open(file_path, 'r') as file:
+    data = json.load(file)
+
+# Convert the JSON data to a Pandas DataFrame
+df = pd.DataFrame(data)
+
+# Success Analysis: Calculate the number of successful guesses
+successes = df[df['Guessed word'] == df['Target word']].shape[0]
+
+# Progression Analysis: Prepare data for analyzing trends of 'G' and 'Y' counts over attempts within each run
+# We'll group by 'Run #' and then examine the 'G' and 'Y' trends within those groups
+g_y_trends = df.groupby('Run #').apply(lambda x: x[['Number of \'G\' in colorised results', 'Number of \'Y\' in colorised results']].values.tolist(), include_groups=False)
+# Displaying the total number of successes
+successes, g_y_trends.head()
+def plot_g_y_trends_for_all_runs(g_y_trends):
+    runs_to_plot = g_y_trends.index.unique()  # Automatically determine all runs
+    num_runs = len(runs_to_plot)
+    fig, axes = plt.subplots(nrows=num_runs, ncols=1, figsize=(10, 5 * num_runs), sharex=True)
+
+    if num_runs == 1:  # Adjust if there's only one run to plot
+        axes = [axes]
+
+    for run, ax in zip(runs_to_plot, axes):
+        trends = g_y_trends.loc[run]
+        attempts = range(1, len(trends) + 1)
+        g_counts = [trend[0] for trend in trends]
+        y_counts = [trend[1] for trend in trends]
+        
+        ax.plot(attempts, g_counts, marker='o', linestyle='-', color='green', label='Correct Position (G)')
+        ax.plot(attempts, y_counts, marker='o', linestyle='-', color='orange', label='Correct Letter, Wrong Position (Y)')
+        ax.set_title(f'Run #{run} Trends of G and Y Counts')
+        ax.set_xlabel('Attempt Number')
+        ax.set_ylabel('Count')
+        ax.legend()
+        ax.grid(True)
+
+    plt.tight_layout()
+    # Save the figure
+    plt.savefig('charts/wordle_g_y_trends.png', format='png')
+
+# Call the function to plot and save the figure for all runs
+plot_g_y_trends_for_all_runs(g_y_trends)
+
+# Preparing data for visualization
+# We need to reset the index to work with 'Run #' as a regular column for easier plotting
+df_reset = df.reset_index()
+# Plotting
+plt.figure(figsize=(14, 7))
+
+# Plot for 'G' counts
+sns.lineplot(data=df_reset, x="Run #", y="Number of 'G' in colorised results", marker='o', label="Correct Position ('G')", color="green")
+
+# Plot for 'Y' counts
+sns.lineplot(data=df_reset, x="Run #", y="Number of 'Y' in colorised results", marker='o', label="Correct Letter, Wrong Position ('Y')", color="orange")
+
+plt.title("Average 'G' and 'Y' Counts per Attempt Across Runs")
+plt.xlabel("Run Number")
+plt.ylabel("Average Count")
+plt.xticks(rotation=45)
+plt.legend()
+plt.grid(True)
+plt.savefig('charts/wordle_avg_GY_trend.png')
+
+# Heatmap of 'G+Y' counts across all attempts and runs
+df['Total G+Y'] = df["Number of 'G' in colorised results"] + df["Number of 'Y' in colorised results"]
+heatmap_data = df.pivot_table(index='Run #', columns='Global attempt #', values='Total G+Y', aggfunc='mean', fill_value=0)
+
+plt.figure(figsize=(12, 7))
+sns.heatmap(heatmap_data, annot=True, fmt=".1f", linewidths=.5, cmap='YlGnBu')
+plt.title("Heatmap of 'G+Y' Counts per Attempt Across All Runs")
+plt.xlabel("Attempt Number")
+plt.ylabel("Run Number")
+plt.savefig('charts/wordle_heatmap avg.png')
+
+# Box Plot of 'G' and 'Y' Counts
+plt.figure(figsize=(14, 7))
+sns.boxplot(data=df[['Number of \'G\' in colorised results', 'Number of \'Y\' in colorised results']])
+plt.title("Box Plot of 'G' and 'Y' Counts Across All Attempts")
+plt.ylabel("Count")
+plt.savefig('charts/wordle_GY_count.png')
+
+---
+./output.txt
+---
+./README.md
+---
+# LOOP-Evals
+Logical Operations On Problems: The idea is to test simple Iterative Reasoning tests for LLMs, through puzzles which are hard to solve and easy to evaluate.
+
+# Why?
+LLMs are hard to evaluate, as [I've written multiple times](https://www.strangeloopcanon.com/p/evaluations-are-all-we-need), and their ability to reason is difficult to separate from what they're trained on. So I wanted to find a way to test its ability to iteratively reason and answer questions. 
+
+I started with the simplest version of it I could think of that satisfies the criteria: namely whether it can create wordgrids, successively in 3x3, 4x4 and 5x5 sizes. Why this? Because evaluations should be a) easy to create, AND b) easy to evaluate, while still being hard to do!
+
+The second is ... Wordle. Same principle!
+
+The third is ... Sudoku! The pastime that was meant to be both fun and a cure for dementia, but seemingly once again surprisingly hard for LLMs to solve!
+
+# How
+Let's start with the wordgrids. First it asks LLMs to create word grids with minimal constraints (starting word starts with C and last word ends with N) in 3 sizes - 3x3, 4x4, and 5x5.
+
+The test is whether they can create them. It tries this over 50 attempts in the attached code, each attempt having 10 turns each, each turn using the previously generated word grid and asking it to think through and edit it such that they're valid.
+
+Add your openai api key to .env file, make any edits to info.json if you want to change anything and run wordgrid.py. By default its set to gpt-4, and runs 50 Attempts with 10 Runs each, feel free to test other groupings 
+
+Afterwards run analysis_wg.py to do the necessary analysis and make a few pretty charts. Same again for analysis_wordle.py
+
+# Results
+From the wordgrid run on Llama 3, we can see the results, which really aren't spectacular in favour of LLMs. It's very similar for GPT-4 or Claude Opus.
+![Surprised? I really was](charts/wg_success_and_avg_false_count.png)
+
+Or
+![False counts by matrix size](charts/wg_distribution_of_false_counts.png)
+
+Similarly, from the wordle run we can see similar trends as well ...
+![It really doesn't like changing predictions a little by little](charts/wordle_avg_GY_trend.png)
+
+![And the number of "good" guesses don't seem to go any higher than base guesswork](charts/wordle_GY_count.png)
+
+# Next steps
+There are many other such evaluations I want to create. Next up is likely sudokus and cipher puzzles, which also require iterative reasoning while also meeting our criteria.
+
+The goal is: a) get a broad set of such evaluations that meaningfully help us understand general reasoning, b) can continue to be useful as LLMs scale and new architectures develop, and c) help us learn how we learn so we can use that reasoning data to maybe teach AI!
+
+I see this as something that will grow across domains and workflows, just as software did and computerisation before that. This is not only essential to the development of AGI, but a crucial area for us to learn how to use AI, this magical new portal into weird intelligence we've developed!
+
+
+---
+./analysis_wg.py
+---
+import os
+import json
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+# Check if the folder exists, and if not, create it
+os.makedirs('charts', exist_ok=True)
+archive_folder_path = '#Archive/'
+os.makedirs(archive_folder_path, exist_ok=True)
+combined_results_path = 'results/results_wg.json'  # Updated path to match the uploaded file
+
+# Load the JSON data from the file
+with open(combined_results_path, 'r') as file:
+    data = json.load(file)
+
+# Define a function to compute metrics
+def compute_metrics(data):
+    success_rate, avg_false_counts, all_false_counts = {}, {}, {}
+    for matrix, attempts in data.items():
+        matrix_successes = sum(1 for attempt in attempts if 'success' in attempt and attempt['success'])
+        total_attempts = len(attempts)
+        success_rate[matrix] = matrix_successes / total_attempts if total_attempts else 0
+        total_false_counts = sum(run['false_count'] for attempt in attempts if 'runs' in attempt for run in attempt['runs'] if 'false_count' in run)
+        total_runs = sum(len(attempt['runs']) for attempt in attempts if 'runs' in attempt)
+        avg_false_counts[matrix] = total_false_counts / total_runs if total_runs else 0
+        all_false_counts[matrix] = [run['false_count'] for attempt in attempts if 'runs' in attempt for run in attempt['runs'] if 'false_count' in run]
+    return success_rate, avg_false_counts, all_false_counts
+
+# Compute success rates, average false counts, and collect all false counts for histogram
+success_rates, avg_false_counts, all_false_counts = compute_metrics(data)
+
+# Plot Success Rate by Matrix Size
+plt.figure(figsize=(10, 5))
+plt.bar(success_rates.keys(), success_rates.values(), color='green', alpha=0.6, label='Success Rate')
+plt.ylabel('Success Rate')
+plt.legend()
+plt.savefig(f'charts/wg_success_rates.png')
+
+# Plot Success Rate and Average False Count by Matrix Size
+plt.figure(figsize=(10, 5))
+bar_positions = np.arange(len(success_rates))
+plt.bar(bar_positions - 0.2, success_rates.values(), width=0.4, color='green', alpha=0.6, label='Success Rate')
+plt.bar(bar_positions + 0.2, avg_false_counts.values(), width=0.4, color='red', alpha=0.6, label='Avg False Count')
+plt.xticks(bar_positions, success_rates.keys())
+plt.ylabel('Rate')
+plt.title('Success Rate and Average False Count by Matrix Size')
+plt.legend()
+plt.savefig('charts/wg_success_and_avg_false_count.png')
+
+# Plot Distribution of False Counts by Matrix Size
+plt.figure(figsize=(10, 5))
+for matrix, counts in all_false_counts.items():
+    if counts:  # Ensure counts is not empty
+        sns.histplot(counts, bins=max(counts)-min(counts)+1, kde=True, label=matrix, alpha=0.5)
+plt.title('Distribution of False Counts by Matrix Size')
+plt.xlabel('False Counts')
+plt.ylabel('Frequency')
+plt.legend()
+plt.grid(axis='y', alpha=0.75)
+plt.savefig('charts/wg_distribution_of_false_counts.png')
+
+# Normalize for visualization
+max_success_rate = max(success_rates.values()) if success_rates.values() else 1
+max_avg_false_count = max(avg_false_counts.values()) if avg_false_counts.values() else 1
+
+df = pd.DataFrame({
+    'Matrix Size': list(avg_false_counts.keys()),
+    'Normalized Success Rate': [rate / max_success_rate if max_success_rate > 0 else 0 for rate in success_rates.values()],
+    'Normalized Avg False Count': [count / max_avg_false_count if max_avg_false_count > 0 else 0 for count in avg_false_counts.values()]
+})
+
+# Ensure all lists are the same length
+assert len(df['Matrix Size']) == len(df['Normalized Success Rate']) == len(df['Normalized Avg False Count'])
+
+# Visualization of Normalized Success Rate and Avg False Count
+plt.figure(figsize=(12, 8))
+sns.barplot(data=df, x='Matrix Size', y='Normalized Avg False Count', color='blue', label='Normalized Avg False Count')
+sns.lineplot(data=df, x='Matrix Size', y='Normalized Success Rate', color='red', marker='o', label='Normalized Success Rate')
+plt.title('Normalized Success Rate and Avg False Count')
+plt.ylabel('Normalized Rate')
+plt.legend()
+plt.savefig('charts/wg_normalized_success_rate_and_avg_false_count.png')
+
+
+---
+./analysis_wordle.py
+---
+
+
+---
+./requirements.txt
+---
+matplotlib==3.7.1
+numpy==1.26.4
+openai==1.13.3
+pandas==2.2.1
+pyenchant==3.2.2
+python-dotenv==1.0.1
+python_sat==1.8.dev3
+seaborn==0.13.2
+tenacity==8.2.3
+
+
+---
+./sudoku.py
+---
+import os
+import re
+import json
+import openai
+import enchant
+from dotenv import load_dotenv
+load_dotenv()
+from llms.llms import llm_call
+from utils.retry import retry_except
+from puzzles.sudokugen import generate_sudoku, is_valid_move, find_empty_location
+from sudokusolve import encode_sudoku, decode_solution, transpose, solve_sudoku_with_explanation
+from pysat.formula import CNF
+from pysat.solvers import Glucose3
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+with open('info.json', 'r') as file:
+    data = json.load(file)
+
+instructions = data.get('instructions_wg')
+objective = data.get('objective_s')
+small_change = data.get('small_change_wg')
+GPT = data.get('GPT_MODEL')
+ATTEMPTS = 10
+THRESHOLD = 10
+
+def create_sudoku(sudoku, objective):
+    """
+    Generate a sudoku matrix.
+    """
+    response = llm_call(f"""
+                        {instructions}. Objective is: {objective}. Given the following sudoku matrix, please analyse and reply with the number that would satisfy the answer. Sudoku is here: {sudoku}. Answer in the following format.
+                        ```
+                        Number, Number, etc
+                        ```
+    """, GPT)
+    return response
+
+def create_sudoku_row(sudoku, objective):
+    """
+    Generate a sudoku matrix.
+    """
+    response = []
+    for row in sudoku:
+        response_row = llm_call(f"""{instructions}. Objective is: {objective}. Given the following sudoku matrix, please analyse and reply with the number that would satisfy the answer. Sudoku is here: {sudoku}. Solve this row: {row}. Answer in the following format.
+            ```
+            Number, Number, etc
+            ```
+        """, GPT)
+        response.append(response_row)
+    return response
+
+def solve_sudoku(board, replacements):
+    replacement_queue = list(replacements)  # Queue of numbers to insert.
+    print(replacement_queue)
+    for i in range(len(board)):
+        for j in range(len(board[i])):
+            if board[i][j] == 0:  # Found a blank space.
+                if replacement_queue:
+                    board[i][j] = replacement_queue.pop(0)  # Replace with the first number in the queue.
+                else:
+                    return "Not enough replacement numbers provided."
+    if replacement_queue:
+        return "Too many replacement numbers provided."
+    return board
+
+def parse_response_to_int_list(response):
+    # Use regular expression to find all number sequences in the response.
+    numbers = re.findall(r'\d+', response.strip("` \n"))
+    # Convert found number strings to integers.
+    return [int(num) for num in numbers]
+
+def check_solution(sudoku):
+    cnf = encode_sudoku(sudoku)
+    solver = Glucose3()
+    solver.append_formula(cnf)
+    if solver.solve():
+        model = solver.get_model()
+        solution = decode_solution(model)
+        solution = transpose(solution) # Because somehow I swtiched row and columns around
+        print("\nSAT Solver Solution")
+        for row in solution:
+            print(row)
+    else:
+        print("No solution found, sorry!")
+
+def solve_row_by_row(sudoku, objective):
+    final_solution = []
+    for row_index, row in enumerate(sudoku):
+        # Modify this prompt to ask for the solution of a single row, providing necessary context.
+        response = create_sudoku(row, objective)  # Adjust this call as needed.
+        row_solution = parse_response_to_int_list(response)
+        if len(row_solution) != len(row):
+            print(f"Error solving row {row_index + 1}: Response does not match row length.")
+            return None
+        final_solution.append(row_solution)
+    return final_solution
+
+def main():
+    for puzzle_number in range(10, ATTEMPTS + 1):
+        sudoku = generate_sudoku(puzzle_number)
+        if puzzle_number <= THRESHOLD:
+            pass
+        else:
+            # For puzzle numbers greater than 10, solve row by row.
+            print(f"\n--- Puzzle {puzzle_number} (Row by Row) ---\n")
+            response = create_sudoku_row(sudoku,objective)
+            solved_board = solve_sudoku(sudoku, parse_response_to_int_list(response))
+            for row in solved_board:
+                print(row)
+            check_solution(sudoku)
+
+if __name__ == "__main__":
+    main()
+
+
+---
+./sudokusolve.py
+---
+from pysat.formula import CNF
+from pysat.solvers import Glucose3
+from puzzles.sudokugen import generate_sudoku, is_valid_move, find_empty_location
+
+def transpose(grid):
+    return [list(row) for row in zip(*grid)]
+
+def encode_sudoku(sudoku):
+    cnf = CNF()
+
+    # Encode each cell contains at least one number [1-9]
+    for r in range(1, 10):
+        for c in range(1, 10):
+            cnf.append([9 * (r - 1) + 9 * 9 * (c - 1) + n for n in range(1, 10)])
+
+    # Rows, columns, and blocks contain no repeated numbers
+    for n in range(1, 10):
+        for r in range(1, 10):
+            for c1 in range(1, 10):
+                for c2 in range(c1 + 1, 10):
+                    cnf.append([-1 * (9 * (r - 1) + 9 * 9 * (c1 - 1) + n), -1 * (9 * (r - 1) + 9 * 9 * (c2 - 1) + n)])
+                    
+        for c in range(1, 10):
+            for r1 in range(1, 10):
+                for r2 in range(r1 + 1, 10):
+                    cnf.append([-1 * (9 * (r1 - 1) + 9 * 9 * (c - 1) + n), -1 * (9 * (r2 - 1) + 9 * 9 * (c - 1) + n)])
+                    
+        for block in range(9):
+            cells = []
+            start_row = 3 * (block // 3)
+            start_col = 3 * (block % 3)
+            for r in range(1, 4):
+                for c in range(1, 4):
+                    cells.append((start_row + r, start_col + c))
+            for i in range(9):
+                for j in range(i + 1, 9):
+                    r1, c1 = cells[i]
+                    r2, c2 = cells[j]
+                    cnf.append([-1 * (9 * (r1 - 1) + 9 * 9 * (c1 - 1) + n), -1 * (9 * (r2 - 1) + 9 * 9 * (c2 - 1) + n)])
+
+    # Encode known values from the puzzle
+    for r in range(9):
+        for c in range(9):
+            n = sudoku[r][c]
+            if n:
+                cnf.append([9 * r + 9 * 9 * c + n])
+
+    return cnf
+
+def decode_solution(model):
+    solution = [[0 for _ in range(9)] for _ in range(9)]
+    for var in model:
+        if var > 0:
+            var -= 1  # Adjusting 1-based indexing
+            n = 1 + var % 9
+            var //= 9
+            c = var % 9
+            var //= 9
+            r = var
+            solution[r][c] = n
+    return solution
+
+def detailed_reasoning_before_placement(board, row, col, num, depth):
+    """
+    Simulates reasoning for why a specific number is chosen for a cell before actually placing it.
+    This function mimics a thought process considering Sudoku rules.
+    """
+    valid_move = True  # Assume the move is valid until proven otherwise
+
+    # Check if placing 'num' in (row, col) violates Sudoku rules
+    reasons = []
+    # Row and column check
+    for i in range(9):
+        if board[row][i] == num or board[i][col] == num:
+            valid_move = False
+            reasons.append(f"{'    ' * (depth + 1)}Invalid: {num} already in row {row+1} or column {col+1}.")
+            break
+
+    # Subgrid check
+    start_row, start_col = 3 * (row // 3), 3 * (col // 3)
+    for i in range(start_row, start_row + 3):
+        for j in range(start_col, start_col + 3):
+            if board[i][j] == num:
+                valid_move = False
+                reasons.append(f"{'    ' * (depth + 1)}Invalid: {num} already in the 3x3 subgrid.")
+                break
+
+    if valid_move:
+        print(f"{'    ' * (depth + 1)}Valid choice: No conflicts detected for {num}.")
+    else:
+        for reason in reasons:
+            print(reason)
+    
+    return valid_move
+
+def solve_sudoku_with_explanation(board, depth=0):
+    '''
+    Backtracking type constraint solution to figure out how to solve a sudoku.Ca
+    '''
+    empty_cell = find_empty_location(board)
+    if not empty_cell:
+        print(f"{'    ' * depth}Puzzle solved successfully.")
+        return True  # Puzzle solved
+    
+    row, col = empty_cell
+    print(f"{'    ' * depth}Looking for a number to place in cell ({row+1}, {col+1}):")
+    
+    for num in range(1, 10):
+        if is_valid_move(board, row, col, num):
+            print(f"{'    ' * depth}=> Trying {num} at ({row+1}, {col+1}):")
+            
+            # Explain why this number can be placed here (before actually placing it)
+            if not detailed_reasoning_before_placement(board, row, col, num, depth):
+                continue  # Skip to the next number if the current one doesn't fit logically
+            
+            board[row][col] = num
+            print(f"{'    ' * (depth + 1)}Placed {num} at ({row+1}, {col+1}).")
+            
+            if solve_sudoku_with_explanation(board, depth + 1):
+                return True
+            
+            # Backtrack
+            print(f"{'    ' * (depth + 1)}Backtracking: Removing {num} from ({row+1}, {col+1}).")
+            board[row][col] = 0
+    
+    if depth == 0:
+        print("No valid number found for any cell, backtracking...")
+    return False
+
+# Generate a Sudoku puzzle with cells randomly removed -- highest poss is 64 currently
+if __name__ == "__main__":
+    sudoku = generate_sudoku(45)
+    print("Generated Sudoku Puzzle:")
+    for row in sudoku:
+        print(row)
+    print("\n")
+
+    # Backtracking Solver with Explanations (Interactive Mode)
+    print("\nStarting to solve with detailed explanations...")
+    solved = solve_sudoku_with_explanation(sudoku)
+
+    if solved:
+        print("\nSudoku Puzzle Solved Successfully:")
+        for row in sudoku:
+            print(row)
+    else:
+        print("\nFailed to solve the Sudoku puzzle.")
+
+    print("\nSolving with SAT Solver:")
+    cnf = encode_sudoku(sudoku)
+    solver = Glucose3()
+    solver.append_formula(cnf)
+    if solver.solve():
+        model = solver.get_model()
+        solution = decode_solution(model)
+        solution = transpose(solution) # Because somehow I swtiched row and columns around
+        print("\nSAT Solver Solution")
+        for row in solution:
+            print(row)
+    else:
+        print("No solution found, sorry!")
+
+
+---
+./wordgrid.py
+---
+# %%
+import os
+import re
+import json
+import enchant
+from dotenv import load_dotenv
+load_dotenv()
+from llms.llms import llm_call_gpt_json, llm_call_claude_json, llm_call_groq, llm_call_gemini_json
+from utils.retry import retry_except
+
+with open('info.json', 'r') as file:
+    data = json.load(file)
+
+instructions = data.get('instructions_wg')
+small_change = data.get('small_change_wg')
+ATTEMPTS = 50
+TURNS = 5
+GPT = data.get('GPT_MODEL')
+CLAUDE = data.get('CLAUDE')
+OLLAMA = data.get('OLLAMA')
+GEMINI = data.get('GEMINI')
+
+def get_llm_response(input_str, llm_type='openai'):
+    if llm_type == 'openai':
+        return llm_call_gpt_json(input_str, GPT)
+    elif llm_type == 'claude':
+        return llm_call_claude_json(input_str, CLAUDE)
+    elif llm_type == 'groq':
+        return llm_call_groq(input_str)
+    elif llm_type == 'gemini':
+        return llm_call_gemini_json(input_str)    
+    
+def create_word_matrix(objective, llm_type):
+    """Generate a matrix of words, starting with 'C' and ending with 'N'."""
+    response = get_llm_response(f""" {instructions}. Objective is: {objective}. The words have to be valid English words when read across the rows and also when read down the columns. This is very important, think quietly first. Reply with only the list of words, as follows. Ensure you reply with the correct number of words and in the correct order. For example:
+    '''
+    Word, Word, Word etc
+    '''
+    """, llm_type)
+    return response
+
+def check_word_validity(word):
+    """
+    Check if a word is a valid English word using pyenchant.
+    """
+    d = enchant.Dict("en_US")  # or "en_GB" for British English
+    return d.check(word)
+
+def preprocess_json_string(response):
+    """
+    Preprocesses the response string to fix common JSON formatting issues.
+    This function now checks if the input is a string before processing.
+    """
+    if isinstance(response, str):
+        # Remove trailing commas before closing brackets or braces
+        response = re.sub(r',(?=\s*[\]])', '', response)
+        # Replace invalid characters and fix format specifiers
+        response = response.replace("'", '"')
+        response = re.sub(r'\s+', ' ', response).strip()  # Remove excess whitespace
+    return response
+
+# @retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError, ValueError), tries=3, delay=2)
+def extract_words_from_matrix(response):
+    """
+    Enhanced parsing function to extract words from a JSON response that may contain
+    various structures or formatting issues.
+    """
+    print(f"Raw response is: {response}")
+    if isinstance(response, dict):
+        response_json = response
+    else:
+        # If it's a string, preprocess and parse JSON
+        response = preprocess_json_string(response)
+        try:
+            response_json = json.loads(response)
+        except json.JSONDecodeError as e:
+            print(f"Failed to decode JSON from response: {e}. Check the response format.")
+            return []
+    
+    try:
+        # Dynamically identify and extract the word list from the JSON, handling various cases
+        word_list = None
+        for value in response_json.values():
+            if isinstance(value, list):
+                word_list = value  # Direct list of words or lists
+                break
+            elif isinstance(value, str):
+                word_list = value.split(", ")  # Single string of comma-separated words
+                break
+        
+        if not word_list:
+            print("No suitable word list found in the response.")
+            return []
+
+        # If the word list is a list of lists (nested), flatten it
+        if any(isinstance(i, list) for i in word_list):
+            words = [word for sublist in word_list for word in sublist]
+        else:
+            words = word_list
+
+        # Clean and validate the words
+        words = [word.strip().replace('"', '').replace("'", "") for word in words]  # Strip and remove quotes
+        return words
+
+    except json.JSONDecodeError as e:
+        print(f"Failed to decode JSON from response: {e}. Check the response format.")
+        return []
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return []
+    
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def check_words_validity(words):
+    """
+    Checks the validity of each word in the list of words.
+    Returns a dictionary with words as keys and their validity as boolean values.
+    """
+    words_validity = {word: check_word_validity(word.lower()) for word in words}
+    # Check if the first word starts with 'C'
+    if words and not words[0].startswith('C'):
+        words_validity[words[0]] = False  # Mark as invalid
+    
+    # Check if the last word ends with 'N'
+    if words and not words[-1].endswith('N'):
+        words_validity[words[-1]] = False  # Mark as invalid
+    
+    # Check if all words have the same length
+    word_lengths = [len(word) for word in words]
+    if len(set(word_lengths)) > 1:
+        # If there are varying lengths, mark all as invalid for simplicity
+        for word in words:
+            words_validity[word] = False
+    invalid_words_count = sum(not validity for validity in words_validity.values())
+    print(f"Validity measurement is {words_validity}")
+    print(f"Number of invalid words: {invalid_words_count}\n\n")
+    return words_validity
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def regenerate_invalid_words(invalid_words, original_matrix, objective, llm_type):
+    # Construct a prompt to regenerate only the invalid words, using the original matrix as context
+    regeneration_prompt = f"""
+    {small_change}. You had generated an original matrix of words:
+    {original_matrix}. But this contained invalid words {invalid_words} when read across rows and columns. Let's fix this.
+    Objective is: {objective}. The words have to be valid English words when read across the rows and also when read down the columns. This is very important. Think quietly first. Ensure to maintain the matrix's integrity. Ensure you reply with the correct number of words and in the correct order. Reply with only the final list of words, as follows:
+    '''
+    Word, Word, Word etc.
+    '''
+    """
+    response = get_llm_response(regeneration_prompt, llm_type)
+    return response
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def main(attempt_number, objective, llm_type):
+    original_matrix = None
+    results = {
+        'attempt_number': attempt_number,
+        'llm_type': llm_type,
+        'runs': [],
+        'success': False
+    }
+    attempt_count = 0
+    max_attempts = TURNS
+    response = None
+    invalid_words_list = []
+
+    for attempt_count in range(1, max_attempts + 1):
+        attempt_data = {
+            'index': attempt_count,
+            'matrix': None,
+            'word_responses': None,
+            'false_count': None,
+            'error': None
+        }
+
+        try:
+            response = create_word_matrix(objective, llm_type) if attempt_count == 1 else regenerate_invalid_words(invalid_words_list, original_matrix, objective, llm_type)
+            if not response:
+                raise ValueError("Received empty response from LLM")
+
+            print(f"Response is: {response}")
+            words = extract_words_from_matrix(response)
+            all_words_validity = check_words_validity(words)
+
+            invalid_words_count = sum(not validity for validity in all_words_validity.values())
+
+            attempt_data['matrix'] = words
+            attempt_data['word_responses'] = list(all_words_validity.keys())
+            attempt_data['false_count'] = invalid_words_count
+
+            invalid_words_list = [word for word, isValid in all_words_validity.items() if not isValid]
+
+            if not invalid_words_list:
+                results['success'] = True
+                # Break the loop if successful
+            else:
+                original_matrix = response  # Save for regeneration context
+        except ValueError as ve:
+            print(f"A ValueError occurred: {ve}. Continuing with the next attempt...")
+            if response is not None:
+                words = extract_words_from_matrix(response)
+                all_words_validity = check_words_validity(words)
+                invalid_words_list = [word for word, isValid in all_words_validity.items() if not isValid]
+                attempt_data['matrix'] = words if 'words' in locals() else "Error occurred before matrix formation"
+                attempt_data['word_responses'] = list(all_words_validity.keys()) if 'all_words_validity' in locals() else "Error occurred before validity checking"
+                attempt_data['false_count'] = invalid_words_count if 'invalid_words_count' in locals() else "Error occurred before false count calculation"
+            else:
+                attempt_data['error'] = f"ValueError occurred and response is None: {ve}"
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            attempt_data['error'] = str(e)
+
+        results['runs'].append(attempt_data)  # Add attempt data to results regardless of success/failure
+
+    if not results['success']:
+        print("Failed to generate a fully valid matrix within the maximum attempt limit.")
+
+    return results
+ 
+def repeatedly_run_main():
+    objective_keys = ['objective_3', 'objective_4', 'objective_5']
+    llm_types = ['openai'] #['claude', 'openai', 'groq']
+
+    for llm_type in llm_types:
+        for objective_key in objective_keys:
+            objective_description = data.get(objective_key)
+            all_results = []
+            successful = False
+            for attempt in range(1, ATTEMPTS + 1):
+                print(f"Global Attempt {attempt} of {ATTEMPTS} for {objective_key} using {llm_type}...")
+                results = main(attempt, objective_description, llm_type)
+                
+                successful = results.get('success', False)
+                all_results.append(results)
+                
+                if successful:
+                    print(f"Successfully generated a valid matrix for {objective_key} using {llm_type}. Exiting...")
+                    # break
+                else:
+                    print("Attempt unsuccessful.")
+            
+            # Write results after all attempts for an objective are completed
+            with open(f'results_{objective_key}_{llm_type}.json', 'w') as file:
+                json.dump(all_results, file, indent=4)
+            
+            if not successful:
+                print(f"Reached maximum attempt limit without success for {objective_key} using {llm_type}. Exiting...")
+
+    cleanup()
+
+def cleanup():
+    archive_folder_path = '#Archive/'
+    os.makedirs(archive_folder_path, exist_ok=True)
+    os.makedirs('results', exist_ok=True)
+    
+    llm_types = ['openai'] #['claude', 'openai', 'groq']
+    objective_keys = ['objective_3', 'objective_4', 'objective_5']
+    
+    combined_results = {}
+
+    for llm_type in llm_types:
+        for objective_key in objective_keys:
+            file_path = f'results_{objective_key}_{llm_type}.json'
+            with open(file_path, 'r') as file:
+                data = json.load(file)
+                if llm_type not in combined_results:
+                    combined_results[llm_type] = {}
+                combined_results[llm_type][f'matrix_{objective_key}'] = data
+            os.rename(file_path, archive_folder_path + os.path.basename(file_path))
+
+    combined_results_path = 'results/results_wg.json'
+    with open(combined_results_path, 'w') as file:
+        json.dump(combined_results, file, indent=4)
+
+if __name__ == "__main__":
+    repeatedly_run_main()
+
+
+---
+./wordle.py
+---
+import os
+import json
+import openai
+import enchant
+import random
+from dotenv import load_dotenv
+load_dotenv()
+from llms.llms import llm_call_gpt_json, llm_call_claude_json, llm_call_groq, llm_call_gemini_json
+from utils.retry import retry_except
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+with open('info.json', 'r') as file:
+    data = json.load(file)
+
+instructions = data.get('instructions_w')
+objective = data.get('objective_w')
+GPT = data.get('GPT_MODEL')
+CLAUDE = data.get('CLAUDE')
+OLLAMA = data.get('OLLAMA')
+GEMINI = data.get('GEMINI')
+
+def get_llm_response(input_str, llm_type='openai'):
+    if llm_type == 'openai':
+        return llm_call_gpt_json(input_str, GPT)
+    elif llm_type == 'claude':
+        return llm_call_claude_json(input_str, CLAUDE)
+    elif llm_type == 'groq':
+        return llm_call_groq(input_str)
+    elif llm_type == 'gemini':
+        return llm_call_gemini_json(input_str)
+
+def load_words(file_path):
+    with open(file_path, 'r') as file:
+        words = [line.strip().lower() for line in file if len(line.strip()) == 5]
+    return words
+
+def colorize_guess(guess, target):
+    """
+    Generate a formatted feedback message for each operation.
+
+    Parameters:
+    - position: The position being analyzed or modified.
+    - status: The status code or symbol (e.g., 'G' for correct, 'Y' for incorrect but close, etc.).
+    - description: A descriptive message explaining the status.
+
+    Returns:
+    A formatted string with the feedback.
+    """    
+    GYs = []
+    result = ['_'] * 5  # Placeholder for coloring: '_' = not guessed, 'G' = green, 'Y' = yellow
+    target_tmp = list(target)  # Temp copy to mark letters as used
+    feedback = []  # This will now hold dictionaries with position, letter, and feedback
+
+    # First pass for correct positions
+    for i in range(5):
+        if guess[i] == target[i]:
+            result[i] = 'G'
+            target_tmp[i] = None  # Mark as used
+            feedback.append({'position': i, 'letter': guess[i], 'color': 'G'})  # Record the 'G' feedback with position
+        else:
+            feedback.append({'position': i, 'letter': guess[i], 'color': '_'})  # Placeholder
+    
+    # Second pass for correct letters in wrong positions
+    for i in range(5):
+        if guess[i] != target[i] and guess[i] in target_tmp:
+            result[i] = 'Y'
+            target_tmp[target_tmp.index(guess[i])] = None  # Mark as used
+            feedback[i]['color'] = 'Y'  # Update the placeholder to 'Y'
+    
+    # Convert result to colored string or another representation for CLI
+    GYs = ''.join(result)
+    detailed_feedback = "\n".join([f"Position {item['position']+1}: {item['letter']} - {item['color']}" for item in feedback])
+    # target_tmp = list(target)  # Temporary copy to mark letters as used
+    
+    # # First pass for correct positions
+    # for i in range(5):
+    #     if guess[i] == target[i]:
+    #         feedback.append({'position': i+1, 'letter': guess[i], 'feedback': 'Correct position and letter (G)'})
+    #         target_tmp[i] = None  # Mark as used
+    #     else:
+    #         feedback.append({'position': i+1, 'letter': guess[i], 'feedback': None})  # Placeholder
+
+    # # Second pass for correct letters in wrong positions
+    # for i in range(5):
+    #     if feedback[i]['feedback'] is None:  # Only check letters not already marked as correct
+    #         if guess[i] in target_tmp:
+    #             feedback[i]['feedback'] = 'Correct letter, wrong position (Y)'
+    #             target_tmp[target_tmp.index(guess[i])] = None  # Mark as used
+    #         else:
+    #             feedback[i]['feedback'] = 'Letter not in the word (_)'
+
+    # # Format the feedback for display or further processing
+    # feedback_details = "\n".join([f"Position {item['position']}: {item['letter']} - {item['feedback']}" for item in feedback])
+    return GYs, detailed_feedback
+
+def check_word_validity(word):
+    """
+    Check if a word is a valid English word using pyenchant.
+    """
+    if not word:  # Check if the word is empty
+        return False
+    d = enchant.Dict("en_US")  # or "en_GB" for British English
+    return d.check(word)
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError, ValueError), tries=3, delay=2)
+def extract_word(response):
+    if isinstance(response, dict):
+        parsed_response = response
+    else:
+        try:
+            parsed_response = json.loads(response)
+        except json.JSONDecodeError as e:
+            print(f"Failed to decode JSON from response: {e}")
+            return ''
+        except ValueError as e:
+            print(f"ValueError: {e}")
+            return ''
+
+    if isinstance(parsed_response, dict):
+        for key, value in parsed_response.items():
+            if isinstance(value, str):
+                cleaned_response = value.replace('```', '').replace('\n', '').replace("'''", '').strip()
+                print(f"\nExtracted value: {cleaned_response}")  # Debugging: Print the extracted value
+                return cleaned_response
+        print("No suitable string value was found in the response.")
+        return ''
+    else:
+        print("The JSON response did not contain a dictionary as expected.")
+        return ''
+
+def play_wordle(file_path, run_id, llm_type, results):
+    words = load_words(file_path)
+    target = random.choice(words)
+    attempts = 0
+    max_attempts = 5
+    guess_history = []  # Initialize empty list to store history of guesses and feedback
+
+    while attempts <= max_attempts:
+        print(f"\n This is attempt number: {attempts}. \n")
+        history_str = " ".join(guess_history)
+        input_str = f"{instructions}. {objective}. Based on previous attempts: {history_str}. Only return the word."
+
+        guess_response = get_llm_response(input_str, llm_type=llm_type)
+        guess = extract_word(guess_response).strip().lower()
+        
+        words_validity = check_word_validity(guess)
+        print(f"The validity of the word is: {words_validity}")
+        if len(guess) != 5 or not guess.isalpha() or guess not in words:
+            print("Invalid input or word not in list. Try again.")
+            attempts += 1  # Increment the attempt counter to reflect the attempt
+            if attempts >= max_attempts:  # Check if the maximum attempts have been reached
+                print(f"Maximum attempts reached without guessing the word. The correct word was '{target}'.")
+                break  # Exit the loop if the maximum attempts are reached break
+            continue  # Continue to the next iteration of the loop
+
+        attempts += 1
+        GYs, feedback_details = colorize_guess(guess, target)
+        print("Feedback on your guess: ", feedback_details)
+
+        guess_history.append(f"Attempt {attempts}: {guess} - {feedback_details}")
+
+        results.append({
+            "Global attempt #": run_id,
+            "Run #": attempts,
+            "LLM type": llm_type,
+            "Target word": target,
+            "Guessed word": guess,
+            "Number of 'G' in colorised results": GYs.count('G'),
+            "Number of 'Y' in colorised results": GYs.count('Y'),
+            "Feedback": feedback_details
+        })
+
+def main():
+    runs = int(input("Enter the number of runs: "))
+    attempts_per_llm = 10  # Number of attempts per LLM
+    results = []
+    llm_types = ['openai'] #['claude', 'openai', 'groq']
+
+    for run_id in range(1, runs + 1):
+        for llm_type in llm_types:
+            print(f"\n\n Starting run #{run_id} using {llm_type}")
+            for attempt in range(attempts_per_llm):
+                play_wordle('puzzles/wordle.txt', run_id, llm_type, results)
+
+    # Ensure the results directory exists
+    os.makedirs('results', exist_ok=True)
+
+    # Write results to file
+    with open('results/results_wordle.json', 'w') as f:
+        json.dump(results, f, indent=4)
+
+    print("All runs completed. Results stored in 'results/results_wordle.json'.")
+
+if __name__ == '__main__':
+    main()
+
+
+---
+./utils/__init__.py
+---
+
+
+---
+./utils/retry.py
+---
+import time
+from functools import wraps
+
+def retry_except(exceptions_to_catch=(Exception,), tries=4, delay=1):
+    """
+    Retry decorator with customizable parameters.
+
+    Args:
+        exceptions_to_catch: A tuple of exceptions to catch and retry on.
+                             Defaults to catching all Exceptions.
+        tries: The maximum number of attempts.
+        delay: The delay in seconds between retries.
+    """
+
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for attempt in range(1, tries + 1):
+                try:
+                    return func(*args, **kwargs)
+                except exceptions_to_catch as e:
+                    print(f"Exception caught: {e}. Retrying in {delay} seconds (attempt {attempt}/{tries})")
+                    time.sleep(delay)
+            else:  # No exception in the final attempt
+                return func(*args, **kwargs) 
+
+        return wrapper
+    return decorator
+
+
+---
+./llms/llms.py
+---
+from groq import Groq
+from openai import OpenAI
+from anthropic import Anthropic
+import os
+import json
+import time
+import requests
+import google.generativeai as genai
+from dotenv import load_dotenv
+load_dotenv()
+from utils.retry import retry_except
+from tenacity import retry, stop_after_attempt, wait_fixed
+
+system_message = "You are an AI trained to be a brilliant puzzle solver and a genius at lateral thinking. You are brilliant and conscientious."
+
+# Add a schema for gemini to use as an example
+
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_gpt(input, GPT, system_p = system_message, temp = 0.7):
+    client = OpenAI()
+    client.api_key = os.getenv('OPENAI_API_KEY')
+    response = client.chat.completions.create(
+        model=GPT,
+        messages=[
+            {"role": "system", "content": system_p},
+            {"role": "user", "content": f"{input}"}
+        ]
+    )
+    return response.choices[0].message.content
+
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_gpt_assistant(input, INSTRUCTION, GPT, temp = 0.7):
+    client = OpenAI()
+    client.api_key = os.getenv('OPENAI_API_KEY')
+    assistant = client.beta.assistants.create(
+    name="PoY Evaluator to read DB",
+    instructions=INSTRUCTION,
+    model=GPT
+    )
+
+    ASSISTANT_ID = assistant.id
+
+    run, thread = submit_message_and_create_run(client, ASSISTANT_ID, input)
+    returned_response = wait_on_run_and_get_response(client, run, thread)
+    if isinstance(returned_response, list):
+        returned_response = ' '.join(map(str, returned_response))
+
+    returned_response = returned_response.replace("\\\\n", "\\n")
+    returned_response = returned_response.strip()
+
+    return returned_response
+
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_gpt_json(input, GPT, system_p = system_message, temp = 0.7):
+    client = OpenAI()
+    client.api_key = os.getenv('OPENAI_API_KEY')
+    response = client.chat.completions.create(
+        model=GPT,
+        messages=[
+            {"role": "system", "content": system_p},
+            {"role": "user", "content": f"Respond in JSON. {input}"}
+        ],
+        response_format={ "type": "json_object" }
+    )
+    return response.choices[0].message.content
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_claude(input, LLM, system_p = system_message, temp = 0.7):
+    api_key = os.environ.get('ANTHROPIC_API_KEY')
+    client = Anthropic(api_key=api_key)
+    api_key = os.environ.get('ANTHROPIC_API_KEY')
+    response = client.messages.create(
+        model=LLM,
+        system = system_p,
+        messages=[
+            {"role": "user", "content": f"{input}"}
+        ],
+        temperature=temp,
+        max_tokens=4096,
+    )
+    return response.content[0].text
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_claude_json(input, LLM, system_p = system_message, temp = 0.7):
+    client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    response = client.messages.create(
+        model=LLM,
+        system = system_p,
+        messages=[
+            {"role": "user", "content": f"{input}. Give me the answer in JSON."},
+            {"role": "assistant", "content": "Here is the JSON requested:\n{"}
+        ],
+        temperature=temp,
+        max_tokens=4096,
+    )
+    message = response.content[0].text
+    output_json = json.loads("{" + message[:message.rfind("}") + 1])
+    return output_json
+
+# @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_ollama_json(prompt, LLM = "llama3:8b", temp = 0.7):
+    r = requests.post('http://0.0.0.0:11434/api/generate',
+                      json={
+                          'model': LLM, #llama2:7b
+                          'prompt': f"{prompt}. Return this as JSON.",
+                          'format': 'json',
+                      },
+                      stream=False)
+    full_response = ""
+    for line in r.iter_lines():
+        if line:
+            decoded_line = line.decode('utf-8')
+            json_line = json.loads(decoded_line)
+            full_response += json_line.get("response", "")
+            if json_line.get("done"):
+                break
+
+    print(full_response)
+    return full_response
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_ollama(prompt, LLM = "llama3:8b", temp = 0.7):
+    r = requests.post('http://0.0.0.0:11434/api/generate',
+                      json={
+                          'model': LLM,
+                          'prompt': f"{prompt}"
+                      },
+                      stream=False)
+    full_response = ""
+    for line in r.iter_lines():
+        if line:
+            decoded_line = line.decode('utf-8')
+            json_line = json.loads(decoded_line)
+            full_response += json_line.get("response", "")
+            if json_line.get("done"):
+                break
+
+    print(full_response)
+    return full_response
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_groq(prompt, system_p = system_message, model:str="llama3-70b-8192", temp = 0.7):
+    system_prompt = system_p
+    client = Groq()
+    messages = [{
+            "role": "system",
+            "content": system_prompt
+        }, 
+        {
+            "role": "user",
+            "content": prompt
+        }]
+    return client.chat.completions.create(messages=messages, model=model)
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_gemini(prompt, model="gemini-1.5-pro", system_p=system_message):
+    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+    generation_config = {
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "top_k": 40
+    }
+    model = genai.GenerativeModel(
+        model_name=model,
+        generation_config=generation_config,
+    )
+    response = model.generate_content(prompt)
+    return response.text
+
+@retry_except(exceptions_to_catch=(IndexError, ZeroDivisionError), tries=3, delay=2)
+def llm_call_gemini_json(prompt, schema, model="gemini-1.5-pro", system_p=system_message):
+    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+    generation_config = {
+        "temperature": 0.7,
+        "top_p": 0.95,
+        "top_k": 40,
+        "response_mime_type": "application/json"
+    }
+    model = genai.GenerativeModel(
+        model_name=model,
+        generation_config=generation_config,
+    )
+    response = model.generate_content(f"The prompt: {prompt}. Please reply using a JSON schema like this: {schema}")
+    return response.text
+
+def submit_message_and_create_run(client, assistant_id, prompt):
+    """
+    Submit the message and create the run
+    """
+    thread = client.beta.threads.create() # If you replace this globally it appends all answers to the one before.
+    client.beta.threads.messages.create(thread_id=thread.id, role="user", content=prompt)
+    return client.beta.threads.runs.create(thread_id=thread.id, assistant_id=assistant_id, temperature=0.7), thread
+
+def wait_on_run_and_get_response(client, run, thread):
+    """
+    Wait on run
+    """
+    while run.status in ("queued","in_progress"):
+        run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+        time.sleep(0.5)
+    messages = client.beta.threads.messages.list(thread_id=thread.id, order="asc")
+    return [m.content[0].text.value for m in messages if m.role == 'assistant']
+
+
+---
