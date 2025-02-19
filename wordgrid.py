@@ -337,5 +337,16 @@ def repeatedly_run_main():
         json.dump(combined_results, f, indent=4)
     print("Done collecting all results into 'results/results_wg.json'.")
 
+    # After generating 'results_wg.json'
+    archive_folder_path = '#Archive/'
+    os.makedirs(archive_folder_path, exist_ok=True)
+
+    for llm_type in llm_types:
+        for ok in objective_keys:
+            file_path = f"results_{ok}_{llm_type}.json"
+            if os.path.exists(file_path):
+                # Move or delete the file
+                os.rename(file_path, os.path.join(archive_folder_path, os.path.basename(file_path)))
+
 if __name__ == "__main__":
     repeatedly_run_main()
