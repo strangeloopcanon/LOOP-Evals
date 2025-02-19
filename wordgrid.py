@@ -59,27 +59,23 @@ Your final output should be in JSON format, with each word representing a row in
 """
     return get_llm_response(regeneration_prompt, llm_type)
 
-def extract_json_block(text): 
-    """ Attempt to find the first top-level JSON array or object in the text. For example, if the text has commentary around { "grid": [...]} we strip out just that part. We'll search for the first '{' or '[' and then parse until the matching bracket.
+def extract_json_block(text):
+    """
+    Attempt to find the first top-level JSON array or object in the text.
+    For example, if the text has commentary around { "grid": [...]} or a triple-backtick block,
+    we strip out just that JSON portion.
+
     Returns the extracted JSON substring or None if not found.
     """
+    import re
 
-    # Regex approach:
-    # We look for a JSON array (\[...\]) or object (\{...\}) including nested braces.
-    # We'll do a minimal approach: find the first match of triple-backtick JSON or curly bracket.
-
-    # 1) If there's a block in triple-backticks, try to extract what's inside
-    #    e.g. ```json\n[ "HELLO","WORLD" ]\n```
+    # 1) Look for a triple-backtick JSON block, e.g. ```json ... ```
     pattern_backtick = re.compile(r"```json\s*([\s\S]*?)\s*```", re.IGNORECASE)
     match = pattern_backtick.search(text)
     if match:
         return match.group(1).strip()
 
-    # 2) Otherwise, we try to find the first top-level { or [
-    #    We'll do a quick pattern with a naive approach: 
-    #    This won't handle extremely complicated nested JSON + random braces, but often is enough.
-
-    # We'll search for the first occurrence of either '{' or '['
+    # 2) Otherwise, we find the first '{' or '[' and parse until we match braces
     start_index = -1
     brace_type = None
     for i, ch in enumerate(text):
@@ -93,90 +89,97 @@ def extract_json_block(text):
             break
 
     if start_index < 0:
-        return None  # no JSON found
+        # No brace found
+        return None
 
-    # Now we find the matching closing brace 
-    # We'll do a bracket counter for nested structures
+    # We'll do a simple bracket counter to find the matching closing brace.
     stack = []
     i = start_index
     while i < len(text):
         ch = text[i]
         if ch == brace_type:
             stack.append(ch)
-        elif (brace_type == '{' and ch == '}') or (brace_type == '[' and ch == ']'):
+        elif brace_type == '{' and ch == '}':
             stack.pop()
-            if not stack:  # all braces matched
-                # substring from start_index..i inclusive
+            if not stack:
+                return text[start_index:i+1].strip()
+        elif brace_type == '[' and ch == ']':
+            stack.pop()
+            if not stack:
                 return text[start_index:i+1].strip()
         i += 1
 
-    return None  # didn't find a complete matching bracket
+    return None  # never found a complete matching block
 
-def preprocess_json_string(response):
+def preprocess_and_parse_json(response):
     """
-    Preprocess raw LLM responses to remove unwanted formatting and ensure JSON compatibility.
+    1) Extract a JSON block from the response if it has extra text around it.
+    2) Use json.loads() on that block. Return the Python object or None on failure.
     """
-    if not response:
+    import json
+
+    block = extract_json_block(response)
+    if not block:
+        print("❌ Could not extract JSON block from the response. Returning None.")
         return None
 
-    # Remove Markdown-style JSON formatting
-    response = re.sub(r"```json\s*([\s\S]*?)\s*```", r"\1", response, flags=re.DOTALL)
+    try:
+        return json.loads(block)
+    except json.JSONDecodeError:
+        print(f"❌ JSON parsing failed! Attempted block:\n{block}\n")
+        return None
 
-    # Remove any leading/trailing non-JSON text
-    response = response.strip()
+# def preprocess_json_string(response):
+#     """
+#     Preprocess raw LLM responses to remove unwanted formatting and ensure JSON compatibility.
+#     """
+#     if not response:
+#         return None
 
-    # Remove trailing commas before brackets/braces
-    response = re.sub(r',(?=\s*[\]])', '', response)
+#     # Remove Markdown-style JSON formatting
+#     response = re.sub(r"```json\s*([\s\S]*?)\s*```", r"\1", response, flags=re.DOTALL)
 
-    # Replace single quotes with double quotes
-    response = response.replace("'", '"')
+#     # Remove any leading/trailing non-JSON text
+#     response = response.strip()
 
-    # Remove extra whitespace
-    response = re.sub(r'\s+', ' ', response).strip()
+#     # Remove trailing commas before brackets/braces
+#     response = re.sub(r',(?=\s*[\]])', '', response)
 
-    # Ensure it looks like JSON before parsing
-    if not (response.startswith("{") or response.startswith("[")):
-        print(f"Warning: Response does not start with JSON object/array:\n{response}\n")
-        return None  
+#     # Replace single quotes with double quotes
+#     response = response.replace("'", '"')
 
-    return response
+#     # Remove extra whitespace
+#     response = re.sub(r'\s+', ' ', response).strip()
 
-def extract_words_from_matrix(response):
+#     # Ensure it looks like JSON before parsing
+#     if not (response.startswith("{") or response.startswith("[")):
+#         print(f"Warning: Response does not start with JSON object/array:\n{response}\n")
+#         return None  
+
+#     return response
+
+def extract_words_from_matrix(raw_response):
     """
     Extract words from a JSON-like response, handling bad formatting.
     """
-    print(f"Raw response before processing: {response}")
+    print(f"Raw response before processing: {raw_response}")
 
-    response = preprocess_json_string(response)
-    
-    if not response:
+    parsed_obj = preprocess_and_parse_json(raw_response)
+    if parsed_obj is None:
         print("⚠️ Skipping empty or invalid response.")
         return []
 
-    try:
-        response_json = json.loads(response)
-    except json.JSONDecodeError:
-        print(f"❌ JSON parsing failed! Response was:\n{response}\n")
-        return []
+    # Now 'parsed_obj' is either a list, dict, or something else we handle
+    if isinstance(parsed_obj, list):
+        return [str(item).strip() for item in parsed_obj]
 
-    words = []
-    if isinstance(response_json, dict) and response_json:
-        # Try to find a list in the dict
-        for val in response_json.values():
+    if isinstance(parsed_obj, dict):
+        # e.g. {"grid":["CRISP","ROVER","IVORY","SPINE","PERON"]}
+        for val in parsed_obj.values():
             if isinstance(val, list):
-                words = val
-                break
-            elif isinstance(val, str):
-                words = val.split(",")
-                break
-    elif isinstance(response_json, list):
-        words = response_json
-    else:
-        # Maybe response was raw CSV
-        words = [w.strip() for w in response.split(",")]
+                return [str(x).strip() for x in val]
 
-    words = [w.strip().replace('"','').replace("'", "") for w in words]
-    return words
+    return []
 
 def check_word_validity(words):
     """
@@ -276,12 +279,11 @@ def main(attempt_number, objective, llm_type):
             attempt_data['word_responses'] = list(validity_dict.keys())
             attempt_data['false_count'] = invalid_count
 
-            invalid_words_list = [w for w, ok in validity_dict.items() if not ok]
-
             if invalid_count == 0:
                 results['success'] = True
             else:
                 original_matrix = response
+                invalid_words_list = [w for w, ok in validity_dict.items() if not ok]
 
         except ValueError as ve:
             attempt_data['error'] = f"ValueError: {ve}"
