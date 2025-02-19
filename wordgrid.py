@@ -11,7 +11,7 @@ with open('info.json', 'r') as file:
 
 instructions = data.get('instructions_wg')
 small_change = data.get('small_change_wg')
-ATTEMPTS = 5
+ATTEMPTS = 2
 TURNS = 3
 
 def get_llm_response(input_str, model_name):
