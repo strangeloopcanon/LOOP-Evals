@@ -23,9 +23,6 @@ Afterwards run analysis_wg.py to do the necessary analysis and make a few pretty
 From the wordgrid run, we can see the results, which really aren't spectacular in favour of LLMs. It's very similar for the reasoning models too.
 ![Success Rate by Model](charts/wg_success_rate_by_model.png)
 
-Or
-![Average false counts by Model](charts/wg_avg_false_count_by_model.png)
-
 Similarly, from the wordle run we can see similar trends as well ...
 !["G" counts per attemtp shows how well o1 does!](charts/wordle_G_trends_by_model.png)
 
