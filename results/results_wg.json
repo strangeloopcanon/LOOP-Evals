@@ -10,21 +10,21 @@
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 2,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 3,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     }
                 ],
                 "success": false
@@ -38,105 +38,21 @@
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 2,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 3,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 3,
-                "llm_type": "chatgpt-4o-latest",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 4,
-                "llm_type": "chatgpt-4o-latest",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 5,
-                "llm_type": "chatgpt-4o-latest",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     }
                 ],
                 "success": false
@@ -154,21 +70,21 @@
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 2,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 3,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     }
                 ],
                 "success": false
@@ -182,105 +98,21 @@
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 2,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 3,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 3,
-                "llm_type": "claude-3-5-sonnet-latest",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 4,
-                "llm_type": "claude-3-5-sonnet-latest",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 5,
-                "llm_type": "claude-3-5-sonnet-latest",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     }
                 ],
                 "success": false
@@ -298,111 +130,27 @@
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 2,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "ValueError: Empty response from LLM"
                     },
                     {
                         "index": 3,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: peer closed connection without sending complete message body (incomplete chunked read)"
+                        "error": "ValueError: Empty response from LLM"
                     }
                 ],
                 "success": false
             },
             {
                 "attempt_number": 2,
-                "llm_type": "deepseek-reasoner",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 3,
-                "llm_type": "deepseek-reasoner",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 4,
-                "llm_type": "deepseek-reasoner",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 5,
                 "llm_type": "deepseek-reasoner",
                 "runs": [
                     {
@@ -442,21 +190,21 @@
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 2,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     },
                     {
                         "index": 3,
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "error": "Exception: Dictionary for language 'en_US' could not be found\nPlease check https://pyenchant.github.io/pyenchant/ for details"
                     }
                 ],
                 "success": false
@@ -470,34 +218,6 @@
                         "matrix": null,
                         "word_responses": null,
                         "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 3,
-                "llm_type": "gemini-2.0-flash-thinking-exp-01-21",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
                         "error": "ValueError: Empty response from LLM"
                     },
                     {
@@ -509,69 +229,13 @@
                     },
                     {
                         "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
+                        "matrix": [],
+                        "word_responses": [],
+                        "false_count": 0,
+                        "error": null
                     }
                 ],
-                "success": false
-            },
-            {
-                "attempt_number": 4,
-                "llm_type": "gemini-2.0-flash-thinking-exp-01-21",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 5,
-                "llm_type": "gemini-2.0-flash-thinking-exp-01-21",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "ValueError: Empty response from LLM"
-                    }
-                ],
-                "success": false
+                "success": true
             }
         ]
     },
@@ -583,139 +247,13 @@
                 "runs": [
                     {
                         "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
+                        "matrix": [],
+                        "word_responses": [],
+                        "false_count": 0,
+                        "error": null
                     }
                 ],
-                "success": false
-            },
-            {
-                "attempt_number": 2,
-                "llm_type": "o1",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 3,
-                "llm_type": "o1",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 4,
-                "llm_type": "o1",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
-            },
-            {
-                "attempt_number": 5,
-                "llm_type": "o1",
-                "runs": [
-                    {
-                        "index": 1,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 2,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    },
-                    {
-                        "index": 3,
-                        "matrix": null,
-                        "word_responses": null,
-                        "false_count": null,
-                        "error": "Exception: 'NoneType' object has no attribute 'values'"
-                    }
-                ],
-                "success": false
+                "success": true
             }
         ]
     }
