@@ -55,6 +55,8 @@ def compute_metrics_for_attempts(attempts_list):
         if 'runs' in attempt and attempt['runs']:
             for run in attempt['runs']:
                 fc = run.get('false_count', 0)
+                if fc is None:
+                    fc = 0
                 total_false_count += fc
                 all_false_counts.append(fc)
                 total_runs += 1
@@ -90,7 +92,7 @@ plt.ylabel('Success Rate')
 plt.ylim(0, 1)
 plt.legend(title='Model')
 plt.savefig('charts/wg_success_rate_by_model.png')
-plt.show()
+# plt.show()
 
 # ============== Plot #2: Average False Count by (Model, Matrix) ==============
 plt.figure(figsize=(10, 6))
@@ -99,7 +101,7 @@ plt.title('Average False Count by Model and Matrix')
 plt.ylabel('Avg False Count')
 plt.legend(title='Model')
 plt.savefig('charts/wg_avg_false_count_by_model.png')
-plt.show()
+# plt.show()
 
 # ============== Plot #3: Distribution of false counts (hist) ==============
 # We might want a separate distribution per (Model, Matrix)
@@ -125,6 +127,6 @@ sns.histplot(
 )
 plt.title("Distribution of False Counts (stacked by Matrix)")
 plt.savefig('charts/wg_falsecount_distribution.png')
-plt.show()
+# plt.show()
 
 print("Analysis done. See charts folder for the new plots.")

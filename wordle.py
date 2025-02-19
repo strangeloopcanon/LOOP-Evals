@@ -5,7 +5,7 @@ import random
 from dotenv import load_dotenv
 load_dotenv()
 
-import llm  # <-- new import
+import llm
 
 with open('info.json', 'r') as file:
     data = json.load(file)

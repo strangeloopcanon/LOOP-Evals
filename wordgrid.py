@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import enchant
 import llm
 from dotenv import load_dotenv
 load_dotenv()
@@ -18,8 +19,9 @@ def get_llm_response(input_str, model_name):
     Use 'llm' package to get a response from the chosen model.
     """
     model = llm.get_model(model_name)  # No more if/else mapping
-    response = model.prompt(input_str)
-    return response.text()
+    response = model.prompt(input_str).text()
+    print(f"\nRaw LLM response from {model_name}:\n{response}\n")  # Debugging output
+    return response
 
 def create_word_matrix(objective, llm_type):
     """
@@ -58,16 +60,105 @@ Your final output should be in JSON format, with each word representing a row in
     return get_llm_response(regeneration_prompt, llm_type)
 
 def preprocess_json_string(response):
-    ...
-    # (same as before)
+    """
+    Preprocess raw LLM responses to remove unwanted formatting and ensure JSON compatibility.
+    """
+    if not response:
+        return None
+
+    # Remove Markdown-style JSON formatting
+    response = re.sub(r"```json\s*([\s\S]*?)\s*```", r"\1", response, flags=re.DOTALL)
+
+    # Remove any leading/trailing non-JSON text
+    response = response.strip()
+
+    # Remove trailing commas before brackets/braces
+    response = re.sub(r',(?=\s*[\]])', '', response)
+
+    # Replace single quotes with double quotes
+    response = response.replace("'", '"')
+
+    # Remove extra whitespace
+    response = re.sub(r'\s+', ' ', response).strip()
+
+    # Ensure it looks like JSON before parsing
+    if not (response.startswith("{") or response.startswith("[")):
+        print(f"Warning: Response does not start with JSON object/array:\n{response}\n")
+        return None  
+
+    return response
 
 def extract_words_from_matrix(response):
-    ...
-    # (same as before)
+    """
+    Extract words from a JSON-like response, handling bad formatting.
+    """
+    print(f"Raw response before processing: {response}")
+
+    response = preprocess_json_string(response)
+    
+    if not response:
+        print("⚠️ Skipping empty or invalid response.")
+        return []
+
+    try:
+        response_json = json.loads(response)
+    except json.JSONDecodeError:
+        print(f"❌ JSON parsing failed! Response was:\n{response}\n")
+        return []
+
+    words = []
+    if isinstance(response_json, dict) and response_json:
+        # Try to find a list in the dict
+        for val in response_json.values():
+            if isinstance(val, list):
+                words = val
+                break
+            elif isinstance(val, str):
+                words = val.split(",")
+                break
+    elif isinstance(response_json, list):
+        words = response_json
+    else:
+        # Maybe response was raw CSV
+        words = [w.strip() for w in response.split(",")]
+
+    words = [w.strip().replace('"','').replace("'", "") for w in words]
+    return words
 
 def check_word_validity(words):
-    ...
-    # (same as before)
+    """
+    Validate the words: check dictionary existence, length, and constraints.
+    """
+    if not words:
+        print("⚠️ No words provided for validation.")
+        return {}
+
+    d = enchant.Dict("en_US")
+    words_validity = {}
+
+    for i, w in enumerate(words):
+        valid = d.check(w.lower())  # Check if word exists in dictionary
+
+        # Additional constraints
+        if i == 0 and not w.startswith("C"):
+            valid = False
+        if i == len(words) - 1 and not w.endswith("N"):
+            valid = False
+
+        words_validity[w] = valid
+
+    # Check for uniform word length
+    lengths = [len(w) for w in words]
+    if len(set(lengths)) > 1:
+        print("❌ Word lengths are inconsistent.")
+        for w in words_validity:
+            words_validity[w] = False
+
+    invalid_words_count = sum(not x for x in words_validity.values())
+    print(f"Validity measurement is {words_validity}")
+    print(f"Number of invalid words: {invalid_words_count}\n\n")
+    
+    return words_validity
 
 def main(attempt_number, objective, llm_type):
     """

@@ -4,8 +4,7 @@ import json
 import enchant
 from dotenv import load_dotenv
 load_dotenv()
-
-import llm  # <-- new import
+import llm
 
 from puzzles.sudokugen import generate_sudoku, is_valid_move, find_empty_location
 from sudokusolve import encode_sudoku, decode_solution, transpose, solve_sudoku_with_explanation
