@@ -59,6 +59,59 @@ Your final output should be in JSON format, with each word representing a row in
 """
     return get_llm_response(regeneration_prompt, llm_type)
 
+def extract_json_block(text): 
+    """ Attempt to find the first top-level JSON array or object in the text. For example, if the text has commentary around { "grid": [...]} we strip out just that part. We'll search for the first '{' or '[' and then parse until the matching bracket.
+    Returns the extracted JSON substring or None if not found.
+    """
+
+    # Regex approach:
+    # We look for a JSON array (\[...\]) or object (\{...\}) including nested braces.
+    # We'll do a minimal approach: find the first match of triple-backtick JSON or curly bracket.
+
+    # 1) If there's a block in triple-backticks, try to extract what's inside
+    #    e.g. ```json\n[ "HELLO","WORLD" ]\n```
+    pattern_backtick = re.compile(r"```json\s*([\s\S]*?)\s*```", re.IGNORECASE)
+    match = pattern_backtick.search(text)
+    if match:
+        return match.group(1).strip()
+
+    # 2) Otherwise, we try to find the first top-level { or [
+    #    We'll do a quick pattern with a naive approach: 
+    #    This won't handle extremely complicated nested JSON + random braces, but often is enough.
+
+    # We'll search for the first occurrence of either '{' or '['
+    start_index = -1
+    brace_type = None
+    for i, ch in enumerate(text):
+        if ch == '{':
+            start_index = i
+            brace_type = '{'
+            break
+        elif ch == '[':
+            start_index = i
+            brace_type = '['
+            break
+
+    if start_index < 0:
+        return None  # no JSON found
+
+    # Now we find the matching closing brace 
+    # We'll do a bracket counter for nested structures
+    stack = []
+    i = start_index
+    while i < len(text):
+        ch = text[i]
+        if ch == brace_type:
+            stack.append(ch)
+        elif (brace_type == '{' and ch == '}') or (brace_type == '[' and ch == ']'):
+            stack.pop()
+            if not stack:  # all braces matched
+                # substring from start_index..i inclusive
+                return text[start_index:i+1].strip()
+        i += 1
+
+    return None  # didn't find a complete matching bracket
+
 def preprocess_json_string(response):
     """
     Preprocess raw LLM responses to remove unwanted formatting and ensure JSON compatibility.
@@ -127,7 +180,7 @@ def extract_words_from_matrix(response):
 
 def check_word_validity(words):
     """
-    Validate the words: check dictionary existence, length, and constraints.
+    Validate the words: check dictionary existence, length, constraints for the first/last word, AND columns must also form valid words.
     """
     if not words:
         print("⚠️ No words provided for validation.")
@@ -136,29 +189,54 @@ def check_word_validity(words):
     d = enchant.Dict("en_US")
     words_validity = {}
 
+    n = len(words)  # e.g. 5
+    # Basic row checks
     for i, w in enumerate(words):
-        valid = d.check(w.lower())  # Check if word exists in dictionary
+        valid = d.check(w.lower())
 
-        # Additional constraints
+        # Check first row starts with C
         if i == 0 and not w.startswith("C"):
             valid = False
-        if i == len(words) - 1 and not w.endswith("N"):
+        # Check last row ends with N
+        if i == n - 1 and not w.endswith("N"):
             valid = False
 
         words_validity[w] = valid
 
-    # Check for uniform word length
-    lengths = [len(w) for w in words]
-    if len(set(lengths)) > 1:
-        print("❌ Word lengths are inconsistent.")
+    # Check consistent row length
+    row_lengths = [len(w) for w in words]
+    if len(set(row_lengths)) > 1:
+        print("❌ Inconsistent row lengths; marking all invalid.")
         for w in words_validity:
             words_validity[w] = False
+        return words_validity
 
+    # Now check columns
+    # If all rows have length n, we form n columns
+    # We'll build each column word and check in the dictionary
+    col_count = row_lengths[0] if row_lengths else 0
+    # For each col in [0..n-1]
+    for col_index in range(col_count):
+        col_word_chars = []
+        for row_index in range(n):
+            # collect character at col_index in words[row_index]
+            col_word_chars.append(words[row_index][col_index])
+        col_word = ''.join(col_word_chars)
+        # Now check if it's valid
+        if not d.check(col_word.lower()):
+            print(f"❌ Column '{col_word}' is not a valid English word.")
+            # Mark entire puzzle invalid, or you can mark "col_word" invalid somehow.
+            # We'll set everything to invalid for simplicity.
+            for w in words_validity:
+                words_validity[w] = False
+            return words_validity
+
+    # If we pass all checks, we keep words_validity as is
     invalid_words_count = sum(not x for x in words_validity.values())
     print(f"Validity measurement is {words_validity}")
     print(f"Number of invalid words: {invalid_words_count}\n\n")
-    
     return words_validity
+
 
 def main(attempt_number, objective, llm_type):
     """
