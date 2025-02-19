@@ -186,8 +186,9 @@ def check_word_validity(words):
     Validate the words: check dictionary existence, length, constraints for the first/last word, AND columns must also form valid words.
     """
     if not words:
-        print("⚠️ No words provided for validation.")
-        return {}
+        print("⚠️ No words provided for validation. Marking puzzle invalid.")
+        # Return a dict with a dummy entry so invalid_count > 0
+        return {"<<empty puzzle>>": False}
 
     d = enchant.Dict("en_US")
     words_validity = {}
